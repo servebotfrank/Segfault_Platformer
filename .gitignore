@@ -3,3 +3,5 @@
 
 #and files
 a.out
+main.o
+sfml-app
