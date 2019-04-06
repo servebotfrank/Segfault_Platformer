@@ -1,0 +1,5 @@
+#ignore these folders
+.vscode/
+
+#and files
+a.out
