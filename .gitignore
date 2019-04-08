@@ -1,12 +1,6 @@
 #ignore these folders
 .vscode/
 
-#and files
-a.out
-main.o
-sfml-app
-runText
-
 # object files
 *.slo
 *.lo
@@ -27,3 +21,8 @@ runText
 *.la
 *.a
 *.lib
+
+# executables
+*.exe
+*.out
+*.app
