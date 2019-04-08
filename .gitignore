@@ -7,7 +7,13 @@ main.o
 sfml-app
 runText
 
+# object files
 *.slo
 *.lo
 *.o
 *.obj
+
+# precompiled headers
+*.gch
+*.pch
+
