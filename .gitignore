@@ -6,3 +6,8 @@ a.out
 main.o
 sfml-app
 runText
+
+*.slo
+*.lo
+*.o
+*.obj
