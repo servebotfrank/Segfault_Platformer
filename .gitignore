@@ -17,3 +17,13 @@ runText
 *.gch
 *.pch
 
+# dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# static libraries
+*.lai
+*.la
+*.a
+*.lib
