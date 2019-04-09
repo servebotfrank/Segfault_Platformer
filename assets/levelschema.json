@@ -1,0 +1,53 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+        "name": { "type": "string" },
+        "textures": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "path": { "type": "string" },
+                    "tile size": {
+                        "type": "array",
+                        "items": [
+                            { "type": "number" },
+                            { "type": "number" }
+                        ]
+                    }
+                }
+            }
+        },
+        "game objects": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "name": { "type": "string" },
+                    "location": {
+                        "type": "array",
+                        "items": [
+                            { "type": "number" },
+                            { "type": "number" }
+                        ]
+                    },
+                    "size": {
+                        "type": "array",
+                        "items": [
+                            { "type": "number" },
+                            { "type": "number" }
+                        ]
+                    },
+                    "texture": { "type": "string" },
+                    "tiles": {
+                        "type": "array",
+                        "items": {
+                            "type": "number"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
