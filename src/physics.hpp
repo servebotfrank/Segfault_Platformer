@@ -14,7 +14,11 @@ const double _pi, _frameRate;
 public: 
 
 
-Physics::Physics(double xPosition, double yPosition, double xVelocity, double yVelocity);
+Physics(double xPosition, double yPosition, double xVelocity, double yVelocity);
+
+
+
+
 };
 
 
