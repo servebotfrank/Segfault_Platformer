@@ -49,3 +49,8 @@ void GameObject::setPosition(sf::Vector2<double> & newPosition)
 {
     _position = newPosition;
 }
+
+void GameObject::update()
+{
+    
+}

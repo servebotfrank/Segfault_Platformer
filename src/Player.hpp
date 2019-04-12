@@ -14,7 +14,7 @@ class Player : GameObject{
         void setVelocity(sf::Vector2<double> & newVelocity);
 
         //MEMBER FUNCTIONS
-        void update();
+
         
     private:
         sf::Vector2<double> _velocity;

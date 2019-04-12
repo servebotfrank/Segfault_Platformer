@@ -19,6 +19,7 @@ class GameObject{
         void loadTexture(const std::string & textureLocation);
         void createSprite();
         
+        virtual void update();
 
     private:
         sf::Texture _texture;
