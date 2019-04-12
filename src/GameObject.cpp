@@ -23,6 +23,16 @@ void GameObject::loadTexture(const std::string & textureLocation)
     }
 }
 
+void GameObject::createSprite()
+{
+    _sprite.setTexture(getTexture());
+}
+
+sf::Sprite GameObject::getSprite()
+{
+    return _sprite;
+}
+
 //ACCESSORS
 sf::Texture GameObject::getTexture()
 {

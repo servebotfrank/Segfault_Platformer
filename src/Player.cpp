@@ -13,3 +13,8 @@ sf::Vector2<double> Player::getVelocity()
 {
     return _velocity;
 }
+
+void Player::update()
+{
+    
+}

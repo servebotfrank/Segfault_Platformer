@@ -3,14 +3,22 @@
 #include <SFML/Graphics.hpp>
 #include <string>
 class GameObject{
+    
     public:
-GameObject(const std::string & textureLocation, sf::Vector2<double> & position);
-void loadTexture(const std::string & textureLocation);
+        GameObject(const std::string & textureLocation, sf::Vector2<double> & position);
 
-//Accessors
-sf::Vector2<double> getPosition();
-void setPosition(sf::Vector2<double> & newPosition);
-sf::Texture getTexture();
+        //ACCESSORS
+        sf::Vector2<double> getPosition();
+        sf::Texture getTexture();
+        sf::Sprite getSprite();
+
+        //MUTATORS
+        void setPosition(sf::Vector2<double> & newPosition);
+
+        //MEMBER FUNCTIONS
+        void loadTexture(const std::string & textureLocation);
+        void createSprite();
+        
 
     private:
         sf::Texture _texture;

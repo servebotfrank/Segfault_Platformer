@@ -4,14 +4,20 @@
 
 class Player : GameObject{
 
-public:
-Player(const std::string & textureLocation, sf::Vector2<double> & position, sf::Vector2<double> & velocity);
+    public:
+        Player(const std::string & textureLocation, sf::Vector2<double> & position, sf::Vector2<double> & velocity);
 
-void setVelocity(sf::Vector2<double> & newVelocity);
-sf::Vector2<double> getVelocity();
+        //ACCESSORS
+        sf::Vector2<double> getVelocity();
+        
+        //MUTATORS
+        void setVelocity(sf::Vector2<double> & newVelocity);
 
-private:
-sf::Vector2<double> _velocity;
+        //MEMBER FUNCTIONS
+        void update();
+        
+    private:
+        sf::Vector2<double> _velocity;
 
 };
 
