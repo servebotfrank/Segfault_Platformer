@@ -18,25 +18,24 @@
 
 
 class Platform : GameObject{
-    Platform(const std::string & textureLocation, sf::Vector2<double> & position, sf::Vector2<double> & velocity, bool & canMove);
+    Platform(const std::string & textureLocation, const sf::Vector2f & position, const sf::Vector2f & velocity, const float & width, const float & height,  const bool & isStatic);
 
     //ACCESSORS
-    sf::Vector2<double> getVelocity();
-    sf::Vector2<double> getEndPoint();
+    sf::Vector2f getVelocity();
+    sf::Vector2f getEndPoint();
     bool isMovable();
 
     //MUTATORS
-    void setVelocity(sf::Vector2<double> & newVelocity);
-    void setEndPoint(sf::Vector2<double> newEndPoint);
+    void setVelocity(sf::Vector2f & newVelocity);
+    void setEndPoint(sf::Vector2f newEndPoint);
     void changeIfMovable();
 
     //MEMBER FUNCTIONS
     void update();
 
     private:
-        sf::Vector2<double> _velocity;
-        sf::Vector2<double> _endPoint;
-        bool _canMove;
+        sf::Vector2f _velocity;
+        sf::Vector2f _endPoint;
 };
 
 #endif

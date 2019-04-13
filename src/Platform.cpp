@@ -13,41 +13,35 @@
 
 #include "Platform.hpp"
 
-Platform::Platform(const std::string & textureLocation, sf::Vector2<double> & position, sf::Vector2<double> & velocity, bool & canMove) 
-    : GameObject(textureLocation, position), _velocity(velocity), _canMove(canMove)
+Platform::Platform(const std::string & textureLocation, const sf::Vector2f & position, const sf::Vector2f & velocity,  const float & width, const float & height, const bool & isStatic) 
+    : GameObject(textureLocation, position, velocity, width, height, isStatic)
 {}
 
 //ACCESSORS
-sf::Vector2<double> Platform::getVelocity()
+sf::Vector2f Platform::getVelocity()
 {
     return _velocity;
 }
 
-sf::Vector2<double> Platform::getEndPoint()
+sf::Vector2f Platform::getEndPoint()
 {
     return _endPoint;    
 }
 
-bool Platform::isMovable()
-{
-    return _canMove;
-}
+
 
 //MUTATORS
-void Platform::setEndPoint(sf::Vector2<double> newEndPoint)
+void Platform::setEndPoint(sf::Vector2f newEndPoint)
 {
     _endPoint = newEndPoint;
 }
 
-void Platform::setVelocity(sf::Vector2<double> & newVelocity)
+void Platform::setVelocity(sf::Vector2f & newVelocity)
 {
     _velocity = newVelocity;
 }
 
-void Platform::changeIfMovable()
-{
-    _canMove = !isMovable();
-}
+
 
 
 //MEMBER FUNCTIONS

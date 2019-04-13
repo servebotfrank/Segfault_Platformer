@@ -15,21 +15,25 @@
 #define GAMEOBJECT_HPP
 #include <SFML/Graphics.hpp>
 #include <string>
-
+#include "physics.hpp"
 
 
 class GameObject{
     
     public:
-        GameObject(const std::string & textureLocation, sf::Vector2<double> & position);
+        GameObject(const std::string & textureLocation, const sf::Vector2f & position, const sf::Vector2f & velocity, const float & width, const float & height, const bool & isStatic);
 
         //ACCESSORS
-        sf::Vector2<double> getPosition();
+        sf::Vector2f getPosition();
+        sf::Vector2f getVelocity();
         sf::Texture getTexture();
         sf::Sprite getSprite();
 
+
+
         //MUTATORS
-        void setPosition(sf::Vector2<double> & newPosition);
+        void setPosition(sf::Vector2f & newPosition);
+        void setVelocity(sf::Vector2f & newVelocity);
 
         //MEMBER FUNCTIONS
         void loadTexture(const std::string & textureLocation);
@@ -37,12 +41,16 @@ class GameObject{
         
         virtual void update();
 
+
+
     private:
         sf::Texture _texture;
         sf::Sprite _sprite;
-        sf::Vector2<double> _position;
-        double _width;
-        double _height;
+        sf::Vector2f _position;
+        sf::Vector2f _velocity;
+        float _width;
+        float _height;
+        Physics _physicsComponent;
 };
 
 #endif

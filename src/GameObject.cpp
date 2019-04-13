@@ -14,7 +14,9 @@
 #include <iostream>
 #include "GameObject.hpp"
 
-GameObject::GameObject(const std::string & textureLocation, sf::Vector2<double> & position): _position(position)
+
+GameObject::GameObject(const std::string & textureLocation, const sf::Vector2f & position, const sf::Vector2f & velocity, const float & width, const float & height, const bool & isStatic)
+    : _physicsComponent(position, velocity, width, height, isStatic)
 {
     loadTexture(textureLocation);
 }
@@ -42,18 +44,27 @@ sf::Texture GameObject::getTexture()
     return _texture;
 }
 
-sf::Vector2<double> GameObject::getPosition()
+sf::Vector2f GameObject::getPosition()
 {
     return _position;
 }
 
+sf::Vector2f GameObject::getVelocity()
+{
+    return _velocity;
+}
+
 //MUTATORS
-void GameObject::setPosition(sf::Vector2<double> & newPosition)
+void GameObject::setPosition(sf::Vector2f & newPosition)
 {
     _position = newPosition;
 }
 
-void GameObject::update()
+void GameObject::setVelocity(sf::Vector2f & newVelocity)
 {
-    
+    _velocity = newVelocity;
+}
+
+void GameObject::update()
+{    
 }
