@@ -24,7 +24,12 @@ using std::make_unique;
 #include "include/rapidjson/writer.h"
 #include "include/rapidjson/stringbuffer.h"
 
+#include "gameobjectfactory.hpp"
+
 //using json = rapidjson;
+
+using sf::Vector2f;
+using sf::Texture;
 
 LevelLoader::LevelLoader(const std::string& pathToSchema)
     : _pathToSchema(pathToSchema)
@@ -54,17 +59,38 @@ vector<unique_ptr<GameObject>> LevelLoader::loadLevel(const string& pathToLevel)
     vector<unique_ptr<GameObject>> gameObjects;
     const auto& gameObjectSources = level["game objects"];
     for (auto& gameObjectSource: gameObjectSources.GetArray()) {
-        auto objectName = gameObjectSource["name"].GetString();
         auto objectTypeString = gameObjectSource["type"].GetString();
-        const auto& location = gameObjectSource["location"];
-        auto x = location["x"].GetDouble();
-        auto y = location["y"].GetDouble();
-        const auto& size = gameObjectSource["size"];
-        auto width = size["width"].GetDouble();
-        auto height = size["height"].GetDouble();
+        auto objectName = gameObjectSource["name"].GetString();
+        const auto& positionSource = gameObjectSource["position"];
+        auto x = positionSource["x"].GetDouble();
+        auto y = positionSource["y"].GetDouble();
+        Vector2f position(x, y);
+        const auto& velocitySource = gameObjectSource["velocity"];
+        auto dx = velocitySource["x"].GetDouble();
+        auto dy = velocitySource["y"].GetDouble();
+        Vector2f velocity(dx, dy);
+        const auto& sizeSource = gameObjectSource["size"];
+        auto width = sizeSource["width"].GetDouble();
+        auto height = sizeSource["height"].GetDouble();
+        Vector2f size(width, height);
         auto associatedTexture = gameObjectSource["texture"].GetString();
-        auto texture = getTexture(associatedTexture);
-        //gameObject.push_back();
+        auto maybeTexture = getTexture(associatedTexture);
+        Texture texture;
+        if (maybeTexture) {
+            texture = maybeTexture.value();
+        }
+        auto isStatic = gameObjectSource["is static"].GetBool();
+        gameObjects.push_back(
+            GameObjectFactory(
+                objectTypeString,
+                objectName,
+                texture,
+                position,
+                velocity,
+                size,
+                isStatic
+            )
+        );
     }
     return move(gameObjects);
 }
