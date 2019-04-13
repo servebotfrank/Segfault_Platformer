@@ -11,20 +11,25 @@ using std::runtime_error;
 using std::string;
 using std::unique_ptr;
 using std::make_unique;
-#include <memory>
 using std::move;
 
-GameObject* GameObjectFactory(
+using sf::Texture;
+using sf::Vector2;
+
+unique_ptr<GameObject> GameObjectFactory(
     const string& type,
     const string& name,
-    const string& pathToTexture,
-    const sf::Vector2<double>& position)
+    const Texture& texture,
+    const Vector2<double>& position,
+    const Vector2<double>& velocity,
+    const Vector2<double>& size,
+    bool isStatic
 {
     if (type == "player") {
-            return new Player(pathToTexture, position, sf::Vector2<double>(0, 0));
+        return make_unique<Player>(texture, position, velocity, size, isStatic);
     } else if (type == "platform") {
-            //return make_unique<Platform>(pathToTexture, position, sf::Vector2<double>(0, 0), false);
+        return make_unique<Platform>(texture, position, velocity, size, isStatic);
     } else {
-            throw runtime_error("Failed to create a GameObject of type " + type);
+        throw runtime_error("Failed to create a GameObject of type " + type);
     }
 }

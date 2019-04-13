@@ -6,11 +6,14 @@
 #include <SFML/Graphics.hpp>
 
 // Factory
-GameObject* GameObjectFactory(
+unique_ptr<GameObject> GameObjectFactory(
     const std::string& type,
     const std::string& name,
-    const std::string& pathToTexture,
-    const sf::Vector2<double>& position
+    const sf::Texture& texture,
+    const sf::Vector2<double>& position,
+    const sf::Vector2<double>& velocity,
+    const sf::Vector2<double>& size,
+    bool isStatic
 );
 
 #endif
