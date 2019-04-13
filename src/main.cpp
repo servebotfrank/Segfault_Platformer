@@ -1,9 +1,20 @@
+// main.cpp
+
+#include "levelloader.hpp"
+
 #include <iostream>
 #include <SFML/Graphics.hpp>
 
 int main()
 {
     std::cout<<"H O W D Y     Y ' A L L\n";
+    
+    try {
+        LevelLoader loader("../assets/levelschema.json");
+        loader.loadLevel("../assets/testlevel.json");
+    } catch(std::exception& e) {
+        std::cout << "Error::" << e.what() << std::endl;
+    }
     sf::RenderWindow window(sf::VideoMode(200, 200), "SFML works!");
     sf::CircleShape shape(100.f);
     shape.setFillColor(sf::Color::Green);

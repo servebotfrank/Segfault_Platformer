@@ -1,0 +1,32 @@
+{
+    "name": "test level",
+    "relative path to assets": "../assets/",
+    "textures": [
+        {
+            "path": "test_texture.png",
+            "tile size": { "x": 8, "y": 8 }
+        }
+    ],
+    "game objects": [
+        {
+            "name": "player",
+            "type": "player",
+            "position": { "x": 0, "y": 0 },
+            "velocity": { "x": 0, "y": 0 },
+            "is static": false,
+            "size": { "width": 1, "height": 1 },
+            "texture": "test_texture.png",
+            "tiles": [0]
+        },
+        {
+            "name": "platform1",
+            "type": "platform",
+            "position": { "x": 0, "y": -1 },
+            "velocity": { "x": 0, "y": 0 },
+            "is static": true,
+            "size": { "width": 5, "height": 1 },
+            "texture": "test_texture.png",
+            "tiles": [0, 0, 0, 0]
+        }
+    ]
+}

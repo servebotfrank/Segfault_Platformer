@@ -1,0 +1,66 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+        "level name": { "type":"string" },
+        "relative path to assets": { "type":"string" },
+        "textures": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "path": { "type": "string" },
+                    "tile size": {
+                        "type": "object",
+                        "properties": {
+                            "x": { "type": "number" },
+                            "y": { "type": "number" }
+                        }
+                    }
+                }
+            }
+        },
+        "game objects": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "name": { "type": "string" },
+                    "type": {
+                        "type": "string",
+                        "enum":["player", "platform"]
+                    },
+                    "position": {
+                        "type": "object",
+                        "properties": {
+                            "x": { "type":"number" },
+                            "y": { "type":"number" }
+                        }
+                    },
+                    "velocity": {
+                        "type": "object",
+                        "properties": {
+                            "x": { "type":"number" },
+                            "y": { "type":"number" }
+                        }
+                    },
+                    "size": {
+                        "type": "object",
+                        "properties": {
+                            "width": { "type": "number" },
+                            "height": { "type": "number" }
+                        }
+                    },
+                    "texture": { "type": "string" },
+                    "tiles": {
+                        "type": "array",
+                        "items": {
+                            "type": "number"
+                        }
+                    },
+                    "is static": { "type": "boolean" }
+                }
+            }
+        }
+    }
+}
