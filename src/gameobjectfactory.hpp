@@ -3,11 +3,14 @@
 
 #include "GameObject.hpp"
 
+#include <SFML/Graphics.hpp>
+
 // Factory
-std::unique_ptr<GameObject> GameObjectFactory(
+GameObject* GameObjectFactory(
     const std::string& type,
     const std::string& name,
-    const sf::Vector2f& position
+    const std::string& pathToTexture,
+    const sf::Vector2<double>& position
 );
 
 #endif
