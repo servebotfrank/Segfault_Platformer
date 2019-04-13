@@ -44,14 +44,18 @@ vector<unique_ptr<GameObject>> LevelLoader::loadLevel(const string& pathToLevel)
     }
 
     auto name = level["name"].GetString();
+    _relativePathToAssets = level["relative path to assets"].GetString();
+
     std::cout << name << std::endl;
     const auto& textureSources = level["textures"];
     for (auto& textureSource: textureSources.GetArray()) {
         loadTexture(textureSource["path"].GetString());
     }
     const auto& gameObjectSources = level["game objects"];
-    for (auto& gameObjectSource: textureSources.GetArray()) {
-        auto typeString = gameObjectSource["type"].GetString();
+    for (auto& gameObjectSource: gameObjectSources.GetArray()) {
+        auto objectName = gameObjectSource["name"].GetString();
+        auto objectTypeString = gameObjectSource["type"].GetString();
+        
     }
     return {};
 }
@@ -59,13 +63,18 @@ void LevelLoader::saveLevel(const string& pathToFile, vector<unique_ptr<GameObje
 {
 
 }
-optional<sf::Texture> LevelLoader::getTexture(const string& pathToTexture) const
+optional<sf::Texture> LevelLoader::getTexture(const string& textureFileName) const
 {
-    return optional<sf::Texture>();
-}
-void LevelLoader::loadTexture(const string& pathToTexture)
-{
+    auto pathToTexture = _relativePathToAssets+textureFileName;
     if (_loadedTextures.find(pathToTexture) != _loadedTextures.end()) {
+        return optional<sf::Texture>(_loadedTextures.at(pathToTexture));
+    }
+    return {};
+}
+void LevelLoader::loadTexture(const string& textureFileName)
+{
+    auto pathToTexture = _relativePathToAssets+textureFileName;
+    if (_loadedTextures.find(pathToTexture) == _loadedTextures.end()) {
         sf::Texture texture;
         texture.loadFromFile(pathToTexture);
         _loadedTextures.insert({pathToTexture, texture});
