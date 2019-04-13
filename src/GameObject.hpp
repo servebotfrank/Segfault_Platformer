@@ -21,8 +21,8 @@
 class GameObject{
     
     public:
-        GameObject(const std::string & textureLocation, const sf::Vector2f & position, const sf::Vector2f & velocity, const float & width, const float & height, const bool & isStatic);
-
+        GameObject(const sf::Texture & texture, const sf::Vector2f & position, const sf::Vector2f & velocity, const sf::Vector2f & size, const bool & isStatic);
+        virtual ~GameObject();
         //ACCESSORS
         sf::Vector2f getPosition();
         sf::Vector2f getVelocity();
@@ -36,15 +36,13 @@ class GameObject{
         void setVelocity(sf::Vector2f & newVelocity);
 
         //MEMBER FUNCTIONS
-        void loadTexture(const std::string & textureLocation);
-        void createSprite();
+        void createSprite(sf::Texture texture);
         
         virtual void update();
 
 
 
     private:
-        sf::Texture _texture;
         sf::Sprite _sprite;
         sf::Vector2f _position;
         sf::Vector2f _velocity;
