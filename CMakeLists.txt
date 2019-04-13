@@ -4,7 +4,8 @@ project (Platformer VERSION 0.1 LANGUAGES CXX)
 find_package(SFML 2.5 COMPONENTS system window graphics REQUIRED)
 
 set (SOURCES
-
+    src/levelloader.cpp
+    src/levelloader.hpp
 )
 set (MAIN_SOURCE
     src/main.cpp
