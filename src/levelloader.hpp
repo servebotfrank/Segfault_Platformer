@@ -1,5 +1,8 @@
 // levelloader.hpp
 
+#include "GameObject.hpp"
+#include "include/rapidjson/schema.h"
+
 #include <optional>
 #include <string>
 #include <vector>
@@ -7,14 +10,15 @@
 
 #include <SFML/Graphics.hpp>
 
-#include "include/rapidjson/schema.h"
-
 #ifndef LEVEL_LOADER_HPP
 #define LEVEL_LOADER_HPP
 
-class GameObject {
-
-};
+// Factory
+std::unique_ptr<GameObject> GameObjectFactory(
+    const std::string& type,
+    const std::string& name,
+    const sf::Vector2f& position
+);
 
 // Singleton
 class LevelLoader {
@@ -36,9 +40,10 @@ public:
 private:
     std::string readFile(const std::string& pathToFile) const;
 
+    std::string _relativePathToAssets;
     std::map<std::string, sf::Texture> _loadedTextures;
 
-    const std::string _pathToSchema;
+    std::string _pathToSchema;
     rapidjson::SchemaDocument _levelSchema;
     rapidjson::SchemaValidator _levelValidator;
 
