@@ -30,18 +30,18 @@
                         "enum":["player", "platform"]
                     },
                     "location": {
-                        "type": "array",
-                        "items": [
-                            { "type": "number" },
-                            { "type": "number" }
-                        ]
+                        "type": "object",
+                        "properties": {
+                            "x": { "type":"number" },
+                            "y": { "type":"number" }
+                        }
                     },
                     "size": {
-                        "type": "array",
-                        "items": [
-                            { "type": "number" },
-                            { "type": "number" }
-                        ]
+                        "type": "object",
+                        "properties": {
+                            "width": { "type": "number" },
+                            "height": { "type": "number" }
+                        }
                     },
                     "texture": { "type": "string" },
                     "tiles": {
