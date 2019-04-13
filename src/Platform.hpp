@@ -18,6 +18,7 @@
 
 
 class Platform : public GameObject{
+public:
     Platform(const sf::Texture & texture, const sf::Vector2f & position, const sf::Vector2f & velocity, const sf::Vector2f & size,  const bool & isStatic);
 
     //ACCESSORS
