@@ -1,28 +1,27 @@
 {
     "name": "test level",
+    "relative path to assets": "../assets/",
     "textures": [
         {
-            "path": "assets/test_texture.png",
-            "tile size": [512, 512]
-        },
-        {
-            "path": "assets/test_texture_map.png",
-            "tile size": [64, 64]
+            "path": "test_texture.png",
+            "tile size": [8, 8]
         }
     ],
     "game objects": [
         {
             "name": "player",
+            "type": "player",
             "location": [0, 0],
             "size": [1, 0.5],
             "texture": "test_texture.png",
             "tiles": [0]
         },
         {
-            "name": "enviroment",
+            "name": "platform1",
+            "type": "platform",
             "location": [0,-1],
             "size": [5, 1],
-            "path": "assets/test_texture_map.png",
+            "path": "test_texture.png",
             "tiles": [0, 0, 0, 0]
         }
     ]
