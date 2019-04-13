@@ -10,18 +10,9 @@
 
 #include "Player.hpp"
 
-Player::Player(const std::string & textureLocation, sf::Vector2<double> & position, sf::Vector2<double> & velocity) :GameObject(textureLocation, position), _velocity(velocity)
+Player::Player(const std::string & textureLocation, const sf::Vector2f & position, const sf::Vector2f & velocity, const float & width, const float & height, const  bool & isStatic) 
+    :GameObject(textureLocation, position, velocity, width, height, isStatic)
 {   
-}
-
-void Player::setVelocity(sf::Vector2<double> & newVelocity)
-{
-    _velocity = newVelocity;
-}
-
-sf::Vector2<double> Player::getVelocity()
-{
-    return _velocity;
 }
 
 //MEMBER FUNCTIONS
