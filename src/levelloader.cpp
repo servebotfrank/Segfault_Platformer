@@ -2,8 +2,6 @@
 
 #include "levelloader.hpp"
 
-#include "picojson/picojson.h"
-
 #include <sstream>
 using std::stringstream;
 #include <fstream>
@@ -17,12 +15,44 @@ using std::optional;
 using std::unique_ptr;
 using std::make_unique;
 
-//using picojson = json;
+#include <iostream>
+
+#include "include/rapidjson/error/en.h"
+#include "include/rapidjson/filereadstream.h"
+
+#include "include/rapidjson/document.h"
+#include "include/rapidjson/writer.h"
+#include "include/rapidjson/stringbuffer.h"
+
+//using json = rapidjson;
+
+LevelLoader::LevelLoader(const std::string& pathToSchema)
+    : _pathToSchema(pathToSchema)
+    , _levelSchema(createSchemaDocument(_pathToSchema))
+    , _levelValidator(_levelSchema)
+{}
 
 vector<unique_ptr<GameObject>> LevelLoader::loadLevel(const string& pathToLevel)
 {
-    auto fileSource = readFile(pathToLevel);
-    std::cout << fileSource << std::endl;
+    auto level = createDocument(pathToLevel);
+    
+    auto schemaDocument = createSchemaDocument(_pathToSchema);
+    auto valid = level.Accept(_levelValidator);
+    _levelValidator.Reset();
+    if (!valid) {
+        throw runtime_error("Json " + pathToLevel + " does not comply with the schema " + _pathToSchema);
+    }
+
+    auto name = level["name"].GetString();
+    std::cout << name << std::endl;
+    const auto& textureSources = level["textures"];
+    for (auto& textureSource: textureSources.GetArray()) {
+        loadTexture(textureSource["path"].GetString());
+    }
+    const auto& gameObjectSources = level["game objects"];
+    for (auto& gameObjectSource: textureSources.GetArray()) {
+        auto typeString = gameObjectSource["type"].GetString();
+    }
     return {};
 }
 void LevelLoader::saveLevel(const string& pathToFile, vector<unique_ptr<GameObject>> levelObjects) const
@@ -31,11 +61,15 @@ void LevelLoader::saveLevel(const string& pathToFile, vector<unique_ptr<GameObje
 }
 optional<sf::Texture> LevelLoader::getTexture(const string& pathToTexture) const
 {
-
+    return optional<sf::Texture>();
 }
 void LevelLoader::loadTexture(const string& pathToTexture)
 {
-
+    if (_loadedTextures.find(pathToTexture) != _loadedTextures.end()) {
+        sf::Texture texture;
+        texture.loadFromFile(pathToTexture);
+        _loadedTextures.insert({pathToTexture, texture});
+    }
 }
 string LevelLoader::readFile(const string& pathToFile) const
 {
@@ -46,6 +80,21 @@ string LevelLoader::readFile(const string& pathToFile) const
 
     stringstream buffer;
     buffer << file.rdbuf();
-
     return buffer.str();
+}
+rapidjson::Document LevelLoader::createDocument(const std::string& pathToJson) const
+{
+    auto fileSource = readFile(pathToJson);
+    rapidjson::Document document;
+    document.Parse(fileSource.c_str());
+    if (document.HasParseError()) {
+        throw runtime_error("Not a valid json file " + pathToJson);
+    }
+    return document;
+}
+
+rapidjson::SchemaDocument LevelLoader::createSchemaDocument(const std::string& pathToSchema) const
+{
+    auto document = createDocument(pathToSchema);
+    return rapidjson::SchemaDocument(document);
 }
