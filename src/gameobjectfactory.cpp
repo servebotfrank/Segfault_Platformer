@@ -14,16 +14,16 @@ using std::make_unique;
 using std::move;
 
 using sf::Texture;
-using sf::Vector2;
+using sf::Vector2f;
 
 unique_ptr<GameObject> GameObjectFactory(
     const string& type,
     const string& name,
     const Texture& texture,
-    const Vector2<double>& position,
-    const Vector2<double>& velocity,
-    const Vector2<double>& size,
-    bool isStatic
+    const Vector2f& position,
+    const Vector2f& velocity,
+    const Vector2f& size,
+    bool isStatic)
 {
     if (type == "player") {
         return make_unique<Player>(texture, position, velocity, size, isStatic);
