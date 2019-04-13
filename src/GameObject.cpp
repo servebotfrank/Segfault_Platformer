@@ -1,5 +1,7 @@
 // GameObject Source File
-// April 11th, 2019
+// Last Edited: April 12th, 2019
+// Edited by Kim F.
+//
 //  The GameObject Class is an abstract class
 //      representing a generalized game entity.
 //      The things all gameobject will have are ...
@@ -7,6 +9,7 @@
 //      2. Position
 //      3. Width
 //      4. Height
+//      5. Unique update() function, to be called every frame
 
 #include <iostream>
 #include "GameObject.hpp"

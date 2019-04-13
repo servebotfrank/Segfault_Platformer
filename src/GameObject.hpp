@@ -1,7 +1,23 @@
+// GameObject Header File
+// Last Edited: April 12th, 2019
+// Edited by Kim F.
+//
+//  The GameObject Class is an abstract class
+//      representing a generalized game entity.
+//      The things all gameobject will have are ...
+//      1. A Sprite
+//      2. Position
+//      3. Width
+//      4. Height
+//      5. Unique update() function, to be called every frame
+
 #ifndef GAMEOBJECT_HPP
 #define GAMEOBJECT_HPP
 #include <SFML/Graphics.hpp>
 #include <string>
+
+
+
 class GameObject{
     
     public:
