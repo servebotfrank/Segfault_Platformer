@@ -12,10 +12,10 @@
 #define PLAYER_HPP
 #include "GameObject.hpp"
 
-class Player : GameObject{
+class Player : public GameObject{
 
     public:
-        Player(const std::string & textureLocation, const sf::Vector2f & position, const sf::Vector2f & velocity, const float & width, const float & height, const bool & isStatic);
+        Player(const sf::Texture & texture, const sf::Vector2f & position, const sf::Vector2f & velocity, const sf::Vector2f & size, const bool & isStatic);
 
         //MEMBER FUNCTIONS
         void update();

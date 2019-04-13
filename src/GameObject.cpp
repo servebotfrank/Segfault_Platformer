@@ -15,22 +15,20 @@
 #include "GameObject.hpp"
 
 
-GameObject::GameObject(const std::string & textureLocation, const sf::Vector2f & position, const sf::Vector2f & velocity, const float & width, const float & height, const bool & isStatic)
-    : _physicsComponent(position, velocity, width, height, isStatic)
+GameObject::GameObject(const sf::Texture & texture, const sf::Vector2f & position, const sf::Vector2f & velocity, const sf::Vector2f & size, const bool & isStatic)
+    : _physicsComponent(position, velocity, size, isStatic)
 {
-    loadTexture(textureLocation);
+    createSprite(texture);
 }
 
-void GameObject::loadTexture(const std::string & textureLocation)
+GameObject::~GameObject() 
 {
-    if(!getTexture().loadFromFile(textureLocation))
-    {
-    }
+    
 }
 
-void GameObject::createSprite()
+void GameObject::createSprite(sf::Texture texture)
 {
-    _sprite.setTexture(getTexture());
+    _sprite.setTexture(texture);
 }
 
 sf::Sprite GameObject::getSprite()
@@ -38,11 +36,6 @@ sf::Sprite GameObject::getSprite()
     return _sprite;
 }
 
-//ACCESSORS
-sf::Texture GameObject::getTexture()
-{
-    return _texture;
-}
 
 sf::Vector2f GameObject::getPosition()
 {

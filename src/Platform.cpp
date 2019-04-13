@@ -13,8 +13,8 @@
 
 #include "Platform.hpp"
 
-Platform::Platform(const std::string & textureLocation, const sf::Vector2f & position, const sf::Vector2f & velocity,  const float & width, const float & height, const bool & isStatic) 
-    : GameObject(textureLocation, position, velocity, width, height, isStatic)
+Platform::Platform(const sf::Texture & texture, const sf::Vector2f & position, const sf::Vector2f & velocity, const sf::Vector2f & size, const bool & isStatic) 
+    : GameObject(texture, position, velocity, size, isStatic)
 {}
 
 //ACCESSORS
