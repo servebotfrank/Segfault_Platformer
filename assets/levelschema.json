@@ -2,7 +2,8 @@
     "$schema": "http://json-schema.org/draft-04/schema#",
     "type": "object",
     "properties": {
-        "name": {"type":"string"},
+        "level name": { "type":"string" },
+        "relative path to assets": { "type":"string" },
         "textures": {
             "type": "array",
             "items": {
@@ -10,11 +11,11 @@
                 "properties": {
                     "path": { "type": "string" },
                     "tile size": {
-                        "type": "array",
-                        "items": [
-                            { "type": "number" },
-                            { "type": "number" }
-                        ]
+                        "type": "object",
+                        "properties": {
+                            "x": { "type": "number" },
+                            "y": { "type": "number" }
+                        }
                     }
                 }
             }
@@ -29,7 +30,14 @@
                         "type": "string",
                         "enum":["player", "platform"]
                     },
-                    "location": {
+                    "position": {
+                        "type": "object",
+                        "properties": {
+                            "x": { "type":"number" },
+                            "y": { "type":"number" }
+                        }
+                    },
+                    "velocity": {
                         "type": "object",
                         "properties": {
                             "x": { "type":"number" },
@@ -49,7 +57,8 @@
                         "items": {
                             "type": "number"
                         }
-                    }
+                    },
+                    "is static": { "type": "boolean" }
                 }
             }
         }
