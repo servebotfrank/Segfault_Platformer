@@ -46,18 +46,27 @@ vector<unique_ptr<GameObject>> LevelLoader::loadLevel(const string& pathToLevel)
     auto name = level["name"].GetString();
     _relativePathToAssets = level["relative path to assets"].GetString();
 
-    std::cout << name << std::endl;
     const auto& textureSources = level["textures"];
     for (auto& textureSource: textureSources.GetArray()) {
         loadTexture(textureSource["path"].GetString());
     }
+
+    vector<unique_ptr<GameObject>> gameObjects;
     const auto& gameObjectSources = level["game objects"];
     for (auto& gameObjectSource: gameObjectSources.GetArray()) {
         auto objectName = gameObjectSource["name"].GetString();
         auto objectTypeString = gameObjectSource["type"].GetString();
-        
+        const auto& location = gameObjectSource["location"];
+        auto x = location["x"].GetDouble();
+        auto y = location["y"].GetDouble();
+        const auto& size = gameObjectSource["size"];
+        auto width = size["width"].GetDouble();
+        auto height = size["height"].GetDouble();
+        auto associatedTexture = gameObjectSource["texture"].GetString();
+        auto texture = getTexture(associatedTexture);
+        //gameObject.push_back();
     }
-    return {};
+    return move(gameObjects);
 }
 void LevelLoader::saveLevel(const string& pathToFile, vector<unique_ptr<GameObject>> levelObjects) const
 {
