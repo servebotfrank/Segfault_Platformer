@@ -13,13 +13,6 @@
 #ifndef LEVEL_LOADER_HPP
 #define LEVEL_LOADER_HPP
 
-// Factory
-std::unique_ptr<GameObject> GameObjectFactory(
-    const std::string& type,
-    const std::string& name,
-    const sf::Vector2f& position
-);
-
 // Singleton
 class LevelLoader {
 public:
