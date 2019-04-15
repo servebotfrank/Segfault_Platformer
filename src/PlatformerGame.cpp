@@ -6,7 +6,7 @@ using std::string;
 using std::vector;
 using std::move;
 
-PlatformerGame::PlatformerGame(const std::string& configFilePath)
+PlatformerGame::PlatformerGame(const string& configFilePath)
     : _window(sf::VideoMode(480, 320), "Platformer That Needs a Name")
     , _levelLoader("../assets/levelschema.json")
     , _gameObjects(move(_levelLoader.loadLevel("../assets/testlevel.json")))
