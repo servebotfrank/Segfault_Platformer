@@ -14,6 +14,8 @@ set (SOURCES
     src/physics.hpp
     src/Platform.cpp
     src/Platform.hpp
+    src/PlatformerGame.cpp
+    src/PlatformerGame.hpp
     src/Player.cpp
     src/Player.hpp
 )
