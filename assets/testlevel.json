@@ -3,8 +3,12 @@
     "relative path to assets": "../assets/",
     "textures": [
         {
-            "path": "test_texture.png",
-            "tile size": { "x": 8, "y": 8 }
+            "path": "textures/groundTile00.png",
+            "tile size": { "x": 64, "y": 64 }
+        },
+        {
+            "path": "textures/player00.png",
+            "tile size": { "x": 64, "y": 64 }
         }
     ],
     "game objects": [
@@ -15,7 +19,7 @@
             "velocity": { "x": 0, "y": 0 },
             "is static": false,
             "size": { "width": 1, "height": 1 },
-            "texture": "test_texture.png",
+            "texture": "textures/player00.png",
             "tiles": [0]
         },
         {
@@ -25,7 +29,7 @@
             "velocity": { "x": 0, "y": 0 },
             "is static": true,
             "size": { "width": 5, "height": 1 },
-            "texture": "test_texture.png",
+            "texture": "textures/groundTile00.png",
             "tiles": [0, 0, 0, 0]
         }
     ]
