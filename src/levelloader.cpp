@@ -1,55 +1,53 @@
 // levelloader.cpp
 
 #include "levelloader.hpp"
+#include "jsonHelper.hpp"
+#include "gameobjectfactory.hpp"
+
+#include "rapidjson/error/en.h"
+#include "rapidjson/filereadstream.h"
+
+#include "rapidjson/document.h"
+#include "rapidjson/writer.h"
+#include "rapidjson/stringbuffer.h"
 
 #include <sstream>
-using std::stringstream;
 #include <fstream>
-using std::ifstream;
 #include <exception>
-using std::runtime_error;
+#include <iostream>
 
+using std::runtime_error;
+using std::ifstream;
+using std::stringstream;
 using std::string;
 using std::vector;
 using std::optional;
 using std::unique_ptr;
 using std::make_unique;
 
-#include <iostream>
-
-#include "include/rapidjson/error/en.h"
-#include "include/rapidjson/filereadstream.h"
-
-#include "include/rapidjson/document.h"
-#include "include/rapidjson/writer.h"
-#include "include/rapidjson/stringbuffer.h"
-
-#include "gameobjectfactory.hpp"
-
-//using json = rapidjson;
-
 using sf::Vector2f;
 using sf::Texture;
 
-LevelLoader::LevelLoader(const std::string& pathToSchema)
+LevelLoader::LevelLoader(const std::string& pathToSchema, const std::string& pathToTextures, const std::string& pathToLevels)
     : _pathToSchema(pathToSchema)
-    , _levelSchema(createSchemaDocument(_pathToSchema))
+    , _levelSchema(JSONHelper::createSchemaDocument(pathToSchema))
     , _levelValidator(_levelSchema)
+    , _pathToTextures(pathToTextures)
+    , _loadedTextures()
+    , _pathToLevels(pathToLevels)
 {}
 
 vector<unique_ptr<GameObject>> LevelLoader::loadLevel(const string& pathToLevel)
 {
-    auto level = createDocument(pathToLevel);
+    auto level = JSONHelper::createDocument(_pathToLevels + pathToLevel);
     
-    auto schemaDocument = createSchemaDocument(_pathToSchema);
     auto valid = level.Accept(_levelValidator);
     _levelValidator.Reset();
     if (!valid) {
-        throw runtime_error("Json " + pathToLevel + " does not comply with the schema " + _pathToSchema);
+        throw runtime_error("Json " + _pathToLevels+pathToLevel + " does not comply with the schema " + _pathToSchema);
     }
 
     auto name = level["name"].GetString();
-    _relativePathToAssets = level["relative path to assets"].GetString();
 
     const auto& textureSources = level["textures"];
     for (auto& textureSource: textureSources.GetArray()) {
@@ -100,7 +98,7 @@ void LevelLoader::saveLevel(const string& pathToFile, vector<unique_ptr<GameObje
 }
 optional<sf::Texture> LevelLoader::getTexture(const string& textureFileName) const
 {
-    auto pathToTexture = _relativePathToAssets+textureFileName;
+    auto pathToTexture = _pathToTextures+textureFileName;
     if (_loadedTextures.find(pathToTexture) != _loadedTextures.end()) {
         return optional<sf::Texture>(_loadedTextures.at(pathToTexture));
     }
@@ -108,37 +106,10 @@ optional<sf::Texture> LevelLoader::getTexture(const string& textureFileName) con
 }
 void LevelLoader::loadTexture(const string& textureFileName)
 {
-    auto pathToTexture = _relativePathToAssets+textureFileName;
+    auto pathToTexture = _pathToTextures+textureFileName;
     if (_loadedTextures.find(pathToTexture) == _loadedTextures.end()) {
         sf::Texture texture;
         texture.loadFromFile(pathToTexture);
         _loadedTextures.insert({pathToTexture, texture});
     }
-}
-string LevelLoader::readFile(const string& pathToFile) const
-{
-    ifstream file(pathToFile);
-    if (!file) {
-        throw runtime_error("File not found " + pathToFile);
-    }
-
-    stringstream buffer;
-    buffer << file.rdbuf();
-    return buffer.str();
-}
-rapidjson::Document LevelLoader::createDocument(const std::string& pathToJson) const
-{
-    auto fileSource = readFile(pathToJson);
-    rapidjson::Document document;
-    document.Parse(fileSource.c_str());
-    if (document.HasParseError()) {
-        throw runtime_error("Not a valid json file " + pathToJson);
-    }
-    return document;
-}
-
-rapidjson::SchemaDocument LevelLoader::createSchemaDocument(const std::string& pathToSchema) const
-{
-    auto document = createDocument(pathToSchema);
-    return rapidjson::SchemaDocument(document);
 }

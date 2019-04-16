@@ -1,7 +1,7 @@
 // levelloader.hpp
 
 #include "GameObject.hpp"
-#include "include/rapidjson/schema.h"
+#include "rapidjson/schema.h"
 
 #include <optional>
 #include <string>
@@ -16,14 +16,13 @@
 // Singleton
 class LevelLoader {
 public:
-    LevelLoader(const std::string& pathToSchema);
+    LevelLoader(const std::string& pathToSchema, const std::string& pathToTextures, const std::string& pathToLevels);
     ~LevelLoader()=default;
     LevelLoader(const LevelLoader& other)=delete;
     LevelLoader(LevelLoader&& other)=delete;
     LevelLoader& operator=(const LevelLoader& other)=delete;
     LevelLoader& operator=(LevelLoader&& other)=delete;
 
-    bool validateLevel(const std::string& pathToLevel, const std::string& pathToSchema) const;
     std::vector<std::unique_ptr<GameObject>> loadLevel(const std::string& pathToLevel);
     void saveLevel(const std::string& pathToFile, std::vector<std::unique_ptr<GameObject>> levelObjects) const;
 
@@ -31,17 +30,14 @@ public:
 
     void loadTexture(const std::string& pathToTexture);
 private:
-    std::string readFile(const std::string& pathToFile) const;
-
-    std::string _relativePathToAssets;
-    std::map<std::string, sf::Texture> _loadedTextures;
-
     std::string _pathToSchema;
     rapidjson::SchemaDocument _levelSchema;
     rapidjson::SchemaValidator _levelValidator;
 
-    rapidjson::Document createDocument(const std::string& pathToJson) const;
-    rapidjson::SchemaDocument createSchemaDocument(const std::string& pathToSchema) const;
+    std::string _pathToTextures;
+    std::map<std::string, sf::Texture> _loadedTextures;
+
+    std::string _pathToLevels;
 };
 
 #endif // LEVEL_LOADER_HPP
