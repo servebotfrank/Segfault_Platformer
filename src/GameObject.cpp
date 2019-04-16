@@ -21,35 +21,32 @@ GameObject::GameObject(
     const sf::Vector2f & velocity,
     const sf::Vector2f & size,
     bool isStatic)
-    : _physicsComponent(position, velocity, size, isStatic)
-{
-    createSprite(texture);
-}
+    : _texture(texture), _physicsComponent(position, velocity, size, isStatic)
+{}
 
-void GameObject::createSprite(sf::Texture texture)
+sf::Texture& GameObject::getTextureRef()
 {
-    _sprite.setTexture(texture);
+    return _texture;
 }
-
-sf::Sprite GameObject::getSprite() const
+sf::Vector2f GameObject::getSize() const
 {
-    return _sprite;
+    return _physicsComponent.getSize();
 }
 sf::Vector2f GameObject::getPosition() const
 {
-    return _position;
+    return _physicsComponent.getPosition();
 }
 sf::Vector2f GameObject::getVelocity() const
 {
-    return _velocity;
+    return _physicsComponent.getVelocity();
 }
 
 //MUTATORS
 void GameObject::setPosition(const sf::Vector2f & newPosition)
 {
-    _position = newPosition;
+    //_physicsComponent.setPosition(newPosition);
 }
 void GameObject::setVelocity(const sf::Vector2f & newVelocity)
 {
-    _velocity = newVelocity;
+    //_physicsComponent.setVelocity(newVelocity);
 }
