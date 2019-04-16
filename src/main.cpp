@@ -10,7 +10,7 @@ using std::exception;
 int main()
 {
     try {
-        PlatformerGame game("");
+        PlatformerGame game("../assets/config.json");
         game.run();
     } catch (exception& e) {
         cerr << "Error::" << e.what() << endl;
