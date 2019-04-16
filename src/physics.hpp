@@ -17,9 +17,11 @@ sf::Vector2f _position, _velocity, _size;
 public: 
 
 
-Physics(const sf::Vector2f & position, const sf::Vector2f & velocity, const sf::Vector2f & size, const bool & isStatic);
+Physics(const sf::Vector2f & position, const sf::Vector2f & velocity, const sf::Vector2f & size, bool isStatic);
 
-
+sf::Vector2f getPosition() const;
+sf::Vector2f getVelocity() const;
+sf::Vector2f getSize() const;
 
 
 };
