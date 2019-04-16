@@ -13,39 +13,30 @@
 
 #include "Platform.hpp"
 
-Platform::Platform(const sf::Texture & texture, const sf::Vector2f & position, const sf::Vector2f & velocity, const sf::Vector2f & size, const bool & isStatic) 
-    : GameObject(texture, position, velocity, size, isStatic)
+Platform::Platform(
+    const sf::Texture & texture,
+    const sf::Vector2f & position,
+    const sf::Vector2f & velocity,
+    const sf::Vector2f & size,
+    bool isStatic) : GameObject(texture, position, velocity, size, isStatic)
+{
+    for (size_t x = 0; x < size.x; ++x) {
+        for (size_t y= 0; y < size.y; ++y) {
+            sf::Sprite sprite(getTextureRef());
+            auto currentPosition = getPosition();
+            currentPosition.x += x*64;
+            currentPosition.y += y*64;
+            sprite.setPosition(currentPosition);
+            _sprites.push_back(sprite);
+        }
+    }
+}
+void Platform::update(float dt)
 {}
-
-//ACCESSORS
-sf::Vector2f Platform::getVelocity()
+void Platform::draw(sf::RenderWindow& context)
 {
-    return _velocity;
-}
-
-sf::Vector2f Platform::getEndPoint()
-{
-    return _endPoint;    
-}
-
-
-
-//MUTATORS
-void Platform::setEndPoint(sf::Vector2f newEndPoint)
-{
-    _endPoint = newEndPoint;
-}
-
-void Platform::setVelocity(sf::Vector2f & newVelocity)
-{
-    _velocity = newVelocity;
-}
-
-
-
-
-//MEMBER FUNCTIONS
-void Platform::update()
-{
-
+    auto size = getSize();
+    for (auto sprite: _sprites) {
+        context.draw(sprite);
+    }
 }
