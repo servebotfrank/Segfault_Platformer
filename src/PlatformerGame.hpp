@@ -19,6 +19,7 @@ private:
 
     ConfigLoader _configLoader;
 
+    sf::View _view;
     sf::RenderWindow _window;
     LevelLoader _levelLoader;
     std::vector<std::unique_ptr<GameObject>> _gameObjects;

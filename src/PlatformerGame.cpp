@@ -8,13 +8,18 @@ using std::move;
 
 PlatformerGame::PlatformerGame(const string& configFilePath)
     : _configLoader(configFilePath)
+    , _view(
+        sf::Vector2f(0, 0),
+        sf::Vector2f(_configLoader.getWindowWidth(), _configLoader.getWindowHeight()))
     , _window(sf::VideoMode(_configLoader.getWindowWidth(), _configLoader.getWindowHeight()), _configLoader.getWindowName())
     , _levelLoader(
         _configLoader.getPathToSchema(),
         _configLoader.getPathToTextures(),
         _configLoader.getPathToLevels())
     , _gameObjects(move(_levelLoader.loadLevel(_configLoader.getPathToLevel("test level"))))
-{}
+{
+    _window.setView(_view);
+}
 void PlatformerGame::run()
 {
     sf::Clock clock;
