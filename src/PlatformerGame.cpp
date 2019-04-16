@@ -40,11 +40,11 @@ void PlatformerGame::run()
 void PlatformerGame::update()
 {
 	for (const auto & gameObject : _gameObjects) {
-        gameObject->update(/*_dt*/);
+        gameObject->update(_dt);
 	}
 }
 void PlatformerGame::display() {
 	for (const auto & gameObject : _gameObjects) {
-
+        gameObject->draw(_window);
 	}
 }
