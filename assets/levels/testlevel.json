@@ -1,13 +1,12 @@
 {
     "name": "test level",
-    "relative path to assets": "../assets/",
     "textures": [
         {
-            "path": "textures/groundTile00.png",
+            "path": "groundTile00.png",
             "tile size": { "x": 64, "y": 64 }
         },
         {
-            "path": "textures/player00.png",
+            "path": "player00.png",
             "tile size": { "x": 64, "y": 64 }
         }
     ],
@@ -19,7 +18,7 @@
             "velocity": { "x": 0, "y": 0 },
             "is static": false,
             "size": { "width": 1, "height": 1 },
-            "texture": "textures/player00.png",
+            "texture": "player00.png",
             "tiles": [0]
         },
         {
@@ -29,7 +28,7 @@
             "velocity": { "x": 0, "y": 0 },
             "is static": true,
             "size": { "width": 5, "height": 1 },
-            "texture": "textures/groundTile00.png",
+            "texture": "groundTile00.png",
             "tiles": [0, 0, 0, 0]
         }
     ]
