@@ -19,17 +19,21 @@
 
 class Platform : public GameObject{
 public:
-    using GameObject::GameObject;
-
+    Platform(
+        const sf::Texture & texture,
+        const sf::Vector2f & position,
+        const sf::Vector2f & velocity,
+        const sf::Vector2f & size,
+        bool isStatic);
     //ACCESSORS
 
     //MUTATORS
 
     //MEMBER FUNCTIONS
     void update(float dt) override;
-    void draw(const sf::Window& context) override;
+    void draw(sf::RenderWindow& context) override;
 private:
-
+    std::vector<sf::Sprite> _sprites;
 };
 
 #endif
