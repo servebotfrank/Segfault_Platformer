@@ -5,6 +5,7 @@
 
 #include "GameObject.hpp"
 #include "levelloader.hpp"
+#include "configloader.hpp"
 
 #include <string>
 
@@ -15,6 +16,8 @@ public:
 private:
     void update();
     void display();
+
+    ConfigLoader _configLoader;
 
     sf::RenderWindow _window;
     LevelLoader _levelLoader;

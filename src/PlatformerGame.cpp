@@ -7,9 +7,13 @@ using std::vector;
 using std::move;
 
 PlatformerGame::PlatformerGame(const string& configFilePath)
-    : _window(sf::VideoMode(480, 320), "Platformer That Needs a Name")
-    , _levelLoader("../assets/levelschema.json")
-    , _gameObjects(move(_levelLoader.loadLevel("../assets/testlevel.json")))
+    : _configLoader(configFilePath)
+    , _window(sf::VideoMode(_configLoader.getWindowWidth(), _configLoader.getWindowHeight()), _configLoader.getWindowName())
+    , _levelLoader(
+        _configLoader.getPathToSchema(),
+        _configLoader.getPathToTextures(),
+        _configLoader.getPathToLevels())
+    , _gameObjects(move(_levelLoader.loadLevel(_configLoader.getPathToLevel("test level"))))
 {}
 void PlatformerGame::run()
 {
