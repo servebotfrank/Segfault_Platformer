@@ -19,24 +19,17 @@
 
 class Platform : public GameObject{
 public:
-    Platform(const sf::Texture & texture, const sf::Vector2f & position, const sf::Vector2f & velocity, const sf::Vector2f & size,  const bool & isStatic);
+    using GameObject::GameObject;
 
     //ACCESSORS
-    sf::Vector2f getVelocity();
-    sf::Vector2f getEndPoint();
-    bool isMovable();
 
     //MUTATORS
-    void setVelocity(sf::Vector2f & newVelocity);
-    void setEndPoint(sf::Vector2f newEndPoint);
-    void changeIfMovable();
 
     //MEMBER FUNCTIONS
-    void update();
+    void update(float dt) override;
+    void draw(const sf::Window& context) override;
+private:
 
-    private:
-        sf::Vector2f _velocity;
-        sf::Vector2f _endPoint;
 };
 
 #endif

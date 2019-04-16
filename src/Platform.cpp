@@ -13,39 +13,11 @@
 
 #include "Platform.hpp"
 
-Platform::Platform(const sf::Texture & texture, const sf::Vector2f & position, const sf::Vector2f & velocity, const sf::Vector2f & size, const bool & isStatic) 
-    : GameObject(texture, position, velocity, size, isStatic)
-{}
-
-//ACCESSORS
-sf::Vector2f Platform::getVelocity()
+void Platform::update(float dt)
 {
-    return _velocity;
+
 }
-
-sf::Vector2f Platform::getEndPoint()
-{
-    return _endPoint;    
-}
-
-
-
-//MUTATORS
-void Platform::setEndPoint(sf::Vector2f newEndPoint)
-{
-    _endPoint = newEndPoint;
-}
-
-void Platform::setVelocity(sf::Vector2f & newVelocity)
-{
-    _velocity = newVelocity;
-}
-
-
-
-
-//MEMBER FUNCTIONS
-void Platform::update()
+void Platform::draw(const sf::Window& context)
 {
 
 }
