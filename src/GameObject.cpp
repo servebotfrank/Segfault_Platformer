@@ -15,15 +15,15 @@
 #include "GameObject.hpp"
 
 
-GameObject::GameObject(const sf::Texture & texture, const sf::Vector2f & position, const sf::Vector2f & velocity, const sf::Vector2f & size, const bool & isStatic)
+GameObject::GameObject(
+    const sf::Texture & texture,
+    const sf::Vector2f & position,
+    const sf::Vector2f & velocity,
+    const sf::Vector2f & size,
+    bool isStatic)
     : _physicsComponent(position, velocity, size, isStatic)
 {
     createSprite(texture);
-}
-
-GameObject::~GameObject() 
-{
-    
 }
 
 void GameObject::createSprite(sf::Texture texture)
@@ -31,33 +31,25 @@ void GameObject::createSprite(sf::Texture texture)
     _sprite.setTexture(texture);
 }
 
-sf::Sprite GameObject::getSprite()
+sf::Sprite GameObject::getSprite() const
 {
     return _sprite;
 }
-
-
-sf::Vector2f GameObject::getPosition()
+sf::Vector2f GameObject::getPosition() const
 {
     return _position;
 }
-
-sf::Vector2f GameObject::getVelocity()
+sf::Vector2f GameObject::getVelocity() const
 {
     return _velocity;
 }
 
 //MUTATORS
-void GameObject::setPosition(sf::Vector2f & newPosition)
+void GameObject::setPosition(const sf::Vector2f & newPosition)
 {
     _position = newPosition;
 }
-
-void GameObject::setVelocity(sf::Vector2f & newVelocity)
+void GameObject::setVelocity(const sf::Vector2f & newVelocity)
 {
     _velocity = newVelocity;
-}
-
-void GameObject::update()
-{    
 }

@@ -21,27 +21,28 @@
 class GameObject{
     
     public:
-        GameObject(const sf::Texture & texture, const sf::Vector2f & position, const sf::Vector2f & velocity, const sf::Vector2f & size, const bool & isStatic);
-        virtual ~GameObject();
+        GameObject(
+            const sf::Texture & texture,
+            const sf::Vector2f & position,
+            const sf::Vector2f & velocity,
+            const sf::Vector2f & size,
+            bool isStatic);
+        virtual ~GameObject()=default;
         //ACCESSORS
-        sf::Vector2f getPosition();
-        sf::Vector2f getVelocity();
-        sf::Texture getTexture();
-        sf::Sprite getSprite();
-
-
+        sf::Vector2f getPosition() const;
+        sf::Vector2f getVelocity() const;
+        sf::Texture getTexture() const;
+        sf::Sprite getSprite() const;
 
         //MUTATORS
-        void setPosition(sf::Vector2f & newPosition);
-        void setVelocity(sf::Vector2f & newVelocity);
+        void setPosition(const sf::Vector2f & newPosition);
+        void setVelocity(const sf::Vector2f & newVelocity);
 
         //MEMBER FUNCTIONS
         void createSprite(sf::Texture texture);
         
-        virtual void update();
-
-
-
+        virtual void update(float dt) {}
+        virtual void draw(const sf::Window& context) {}
     private:
         sf::Sprite _sprite;
         sf::Vector2f _position;
