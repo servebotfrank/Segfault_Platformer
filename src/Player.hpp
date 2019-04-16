@@ -15,7 +15,12 @@
 class Player : public GameObject{
 
     public:
-        Player(const sf::Texture & texture, const sf::Vector2f & position, const sf::Vector2f & velocity, const sf::Vector2f & size, const bool & isStatic);
+        Player(
+            const sf::Texture & texture,
+            const sf::Vector2f & position,
+            const sf::Vector2f & velocity,
+            const sf::Vector2f & size,
+            bool isStatic);
 
         //MEMBER FUNCTIONS
         void update();
