@@ -19,3 +19,16 @@ sf::Vector2f Physics::getSize() const
 {
     return _size;
 }
+void Physics::setPosition(sf::Vector2f pos)
+{
+	_position = pos;
+}
+void Physics::setVelocity(sf::Vector2f vel)
+{
+	_velocity = vel;
+}
+
+bool Physics::isGrounded()
+{
+	return true;
+}

@@ -9,7 +9,7 @@
 class Physics
 {
 private:
-double _xVelocity, _yVelocity, _xPosition, _yPosition;
+float height, width;
 const double _pi, _frameRate;
 const bool _isStatic;
 sf::Vector2f _position, _velocity, _size;
@@ -23,6 +23,10 @@ sf::Vector2f getPosition() const;
 sf::Vector2f getVelocity() const;
 sf::Vector2f getSize() const;
 
+void setPosition(sf::Vector2f pos);
+void setVelocity(sf::Vector2f vel);
+
+bool isGrounded();
 
 };
 
