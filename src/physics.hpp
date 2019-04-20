@@ -9,7 +9,6 @@
 class Physics
 {
 private:
-float height, width;
 const double _pi, _frameRate;
 const bool _isStatic;
 sf::Vector2f _position, _velocity, _size;
