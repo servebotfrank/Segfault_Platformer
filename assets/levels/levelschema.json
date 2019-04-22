@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-04/schema#",
     "type": "object",
     "properties": {
-        "level name": { "type":"string" },
-        "relative path to assets": { "type":"string" },
+        "level name": { "type": "string" },
+        "background texture": { "type": "string" },        
         "textures": {
             "type": "array",
             "items": {

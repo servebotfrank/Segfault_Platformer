@@ -1,5 +1,6 @@
 {
     "name": "test level",
+    "background texture": "bg00.png",
     "textures": [
         {
             "path": "groundTile00.png",
