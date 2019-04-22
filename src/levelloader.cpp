@@ -74,11 +74,7 @@ vector<unique_ptr<GameObject>> LevelLoader::loadLevel(const string& pathToLevel)
         auto height = sizeSource["height"].GetDouble();
         Vector2f size(width, height);
         auto associatedTexture = gameObjectSource["texture"].GetString();
-        auto maybeTexture = getTexture(associatedTexture);
-        Texture texture;
-        if (maybeTexture) {
-            texture = maybeTexture.value();
-        }
+        auto texture = getTexture(associatedTexture);
         auto isStatic = gameObjectSource["is static"].GetBool();
         gameObjects.push_back(
             GameObjectFactory(
@@ -98,19 +94,20 @@ void LevelLoader::saveLevel(const string& pathToFile, vector<unique_ptr<GameObje
 {
 
 }
-optional<sf::Texture> LevelLoader::getTexture(const string& textureFileName) const
+sf::Texture LevelLoader::getTexture(const string& textureFileName) const
 {
     auto pathToTexture = _pathToTextures+textureFileName;
     if (_loadedTextures.find(pathToTexture) != _loadedTextures.end()) {
-        return optional<sf::Texture>(_loadedTextures.at(pathToTexture));
+        return sf::Texture(_loadedTextures.at(pathToTexture));
     }
-    return {};
+    return sf::Texture();
 }
 sf::Texture LevelLoader::loadTexture(const string& textureFileName)
 {
     auto pathToTexture = _pathToTextures+textureFileName;
     sf::Texture texture;
-    if (_loadedTextures.find(pathToTexture) == _loadedTextures.end()) {        texture.loadFromFile(pathToTexture);
+    if (_loadedTextures.find(pathToTexture) == _loadedTextures.end()) {
+        texture.loadFromFile(pathToTexture);
         _loadedTextures.insert({pathToTexture, texture});
     }
     return texture;
