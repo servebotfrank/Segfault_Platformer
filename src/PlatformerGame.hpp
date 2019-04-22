@@ -24,6 +24,8 @@ private:
     LevelLoader _levelLoader;
     std::vector<std::unique_ptr<GameObject>> _gameObjects;
 
+    sf::Texture _backgroundTexture;
+
     float _dt;
 };
 

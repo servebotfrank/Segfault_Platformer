@@ -17,6 +17,7 @@ PlatformerGame::PlatformerGame(const string& configFilePath)
         _configLoader.getPathToTextures(),
         _configLoader.getPathToLevels())
     , _gameObjects(move(_levelLoader.loadLevel(_configLoader.getPathToLevel("test level"))))
+    , _backgroundTexture(_levelLoader.getTexture("background texture"))
 {
     _window.setView(_view);
 }
