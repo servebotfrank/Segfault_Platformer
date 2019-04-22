@@ -49,6 +49,8 @@ vector<unique_ptr<GameObject>> LevelLoader::loadLevel(const string& pathToLevel)
 
     auto name = level["name"].GetString();
 
+    _backgroundTexture = loadTexture(level["background texture"].GetString());
+
     const auto& textureSources = level["textures"];
     for (auto& textureSource: textureSources.GetArray()) {
         loadTexture(textureSource["path"].GetString());
@@ -90,7 +92,7 @@ vector<unique_ptr<GameObject>> LevelLoader::loadLevel(const string& pathToLevel)
             )
         );
     }
-    return move(gameObjects);
+    return gameObjects;
 }
 void LevelLoader::saveLevel(const string& pathToFile, vector<unique_ptr<GameObject>> levelObjects) const
 {
@@ -104,12 +106,12 @@ optional<sf::Texture> LevelLoader::getTexture(const string& textureFileName) con
     }
     return {};
 }
-void LevelLoader::loadTexture(const string& textureFileName)
+sf::Texture LevelLoader::loadTexture(const string& textureFileName)
 {
     auto pathToTexture = _pathToTextures+textureFileName;
-    if (_loadedTextures.find(pathToTexture) == _loadedTextures.end()) {
-        sf::Texture texture;
-        texture.loadFromFile(pathToTexture);
+    sf::Texture texture;
+    if (_loadedTextures.find(pathToTexture) == _loadedTextures.end()) {        texture.loadFromFile(pathToTexture);
         _loadedTextures.insert({pathToTexture, texture});
     }
+    return texture;
 }
