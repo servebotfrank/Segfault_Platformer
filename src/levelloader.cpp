@@ -100,7 +100,9 @@ sf::Texture LevelLoader::getTexture(const string& textureFileName) const
     if (_loadedTextures.find(pathToTexture) != _loadedTextures.end()) {
         return sf::Texture(_loadedTextures.at(pathToTexture));
     }
-    return sf::Texture();
+    else {
+        throw runtime_error("Failed to find texture " + pathToTexture);
+    }
 }
 sf::Texture LevelLoader::loadTexture(const string& textureFileName)
 {

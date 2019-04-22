@@ -25,6 +25,7 @@ private:
     std::vector<std::unique_ptr<GameObject>> _gameObjects;
 
     sf::Texture _backgroundTexture;
+    sf::Sprite _backgroundSprite;
 
     float _dt;
 };

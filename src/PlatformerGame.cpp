@@ -17,9 +17,12 @@ PlatformerGame::PlatformerGame(const string& configFilePath)
         _configLoader.getPathToTextures(),
         _configLoader.getPathToLevels())
     , _gameObjects(move(_levelLoader.loadLevel(_configLoader.getPathToLevel("test level"))))
-    , _backgroundTexture(_levelLoader.getTexture("background texture"))
+    , _backgroundTexture(_levelLoader.getTexture("bg00.png"))
+    , _backgroundSprite(_backgroundTexture)
 {
     _window.setView(_view);
+    _window.clear(sf::Color(0, 255, 255));
+    _backgroundSprite.setPosition(sf::Vector2f(-_configLoader.getWindowWidth()/2, -_configLoader.getWindowHeight()/2));
 }
 void PlatformerGame::run()
 {
@@ -38,7 +41,8 @@ void PlatformerGame::run()
 
         update();
 
-        _window.clear();
+        _window.clear(sf::Color(0, 255, 255));
+        _window.draw(_backgroundSprite);
         display();
         _window.display();
     }

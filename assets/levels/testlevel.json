@@ -3,7 +3,7 @@
     "background texture": "bg00.png",
     "textures": [
         {
-            "path": "groundTile00.png",
+            "path": "groundTile02.png",
             "tile size": { "x": 64, "y": 64 }
         },
         {
@@ -29,7 +29,7 @@
             "velocity": { "x": 0, "y": 0 },
             "is static": true,
             "size": { "width": 5, "height": 1 },
-            "texture": "groundTile00.png",
+            "texture": "groundTile02.png",
             "tiles": [0, 0, 0, 0]
         }
     ]
