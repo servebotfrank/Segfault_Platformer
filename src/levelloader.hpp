@@ -3,7 +3,6 @@
 #include "GameObject.hpp"
 #include "rapidjson/schema.h"
 
-#include <optional>
 #include <string>
 #include <vector>
 #include <utility>
