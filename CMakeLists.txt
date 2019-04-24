@@ -4,7 +4,24 @@ project (Platformer VERSION 0.1 LANGUAGES CXX)
 find_package(SFML 2.5 COMPONENTS system window graphics REQUIRED)
 
 set (SOURCES
-
+        src/configloader.cpp
+        src/configloader.hpp
+        src/GameObject.cpp
+        src/GameObject.hpp
+        src/gameobjectfactory.cpp
+        src/gameobjectfactory.hpp
+        src/jsonHelper.cpp
+        src/jsonHelper.hpp
+        src/levelloader.cpp
+        src/levelloader.hpp
+        src/physics.cpp
+        src/physics.hpp
+        src/Platform.cpp
+        src/Platform.hpp
+        src/PlatformerGame.cpp
+        src/PlatformerGame.hpp
+        src/Player.cpp
+        src/Player.hpp
         )
 set (MAIN_SOURCE
         src/main.cpp

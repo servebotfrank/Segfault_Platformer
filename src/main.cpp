@@ -1,25 +1,19 @@
+// main.cpp
+
+#include "PlatformerGame.hpp"
+
 #include <iostream>
-#include <SFML/Graphics.hpp>
+using std::cerr;
+using std::endl;
+using std::exception;
 
 int main()
 {
-    std::cout<<"H O W D Y     Y ' A L L\n";
-    sf::RenderWindow window(sf::VideoMode(200, 200), "SFML works!");
-    sf::CircleShape shape(100.f);
-    shape.setFillColor(sf::Color::Green);
-
-    while (window.isOpen())
-    {
-        sf::Event event;
-        while (window.pollEvent(event))
-        {
-            if (event.type == sf::Event::Closed)
-                window.close();
-        }
-
-        window.clear();
-        window.draw(shape);
-        window.display();
+    try {
+        PlatformerGame game("../assets/config.json");
+        game.run();
+    } catch (exception& e) {
+        cerr << "Error::" << e.what() << endl;
     }
 
     return 0;

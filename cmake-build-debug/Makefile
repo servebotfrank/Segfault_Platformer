@@ -136,6 +136,246 @@ platformer/fast:
 	$(MAKE) -f CMakeFiles/platformer.dir/build.make CMakeFiles/platformer.dir/build
 .PHONY : platformer/fast
 
+src/GameObject.o: src/GameObject.cpp.o
+
+.PHONY : src/GameObject.o
+
+# target to build an object file
+src/GameObject.cpp.o:
+	$(MAKE) -f CMakeFiles/platformer_tests.dir/build.make CMakeFiles/platformer_tests.dir/src/GameObject.cpp.o
+	$(MAKE) -f CMakeFiles/platformer.dir/build.make CMakeFiles/platformer.dir/src/GameObject.cpp.o
+.PHONY : src/GameObject.cpp.o
+
+src/GameObject.i: src/GameObject.cpp.i
+
+.PHONY : src/GameObject.i
+
+# target to preprocess a source file
+src/GameObject.cpp.i:
+	$(MAKE) -f CMakeFiles/platformer_tests.dir/build.make CMakeFiles/platformer_tests.dir/src/GameObject.cpp.i
+	$(MAKE) -f CMakeFiles/platformer.dir/build.make CMakeFiles/platformer.dir/src/GameObject.cpp.i
+.PHONY : src/GameObject.cpp.i
+
+src/GameObject.s: src/GameObject.cpp.s
+
+.PHONY : src/GameObject.s
+
+# target to generate assembly for a file
+src/GameObject.cpp.s:
+	$(MAKE) -f CMakeFiles/platformer_tests.dir/build.make CMakeFiles/platformer_tests.dir/src/GameObject.cpp.s
+	$(MAKE) -f CMakeFiles/platformer.dir/build.make CMakeFiles/platformer.dir/src/GameObject.cpp.s
+.PHONY : src/GameObject.cpp.s
+
+src/Platform.o: src/Platform.cpp.o
+
+.PHONY : src/Platform.o
+
+# target to build an object file
+src/Platform.cpp.o:
+	$(MAKE) -f CMakeFiles/platformer_tests.dir/build.make CMakeFiles/platformer_tests.dir/src/Platform.cpp.o
+	$(MAKE) -f CMakeFiles/platformer.dir/build.make CMakeFiles/platformer.dir/src/Platform.cpp.o
+.PHONY : src/Platform.cpp.o
+
+src/Platform.i: src/Platform.cpp.i
+
+.PHONY : src/Platform.i
+
+# target to preprocess a source file
+src/Platform.cpp.i:
+	$(MAKE) -f CMakeFiles/platformer_tests.dir/build.make CMakeFiles/platformer_tests.dir/src/Platform.cpp.i
+	$(MAKE) -f CMakeFiles/platformer.dir/build.make CMakeFiles/platformer.dir/src/Platform.cpp.i
+.PHONY : src/Platform.cpp.i
+
+src/Platform.s: src/Platform.cpp.s
+
+.PHONY : src/Platform.s
+
+# target to generate assembly for a file
+src/Platform.cpp.s:
+	$(MAKE) -f CMakeFiles/platformer_tests.dir/build.make CMakeFiles/platformer_tests.dir/src/Platform.cpp.s
+	$(MAKE) -f CMakeFiles/platformer.dir/build.make CMakeFiles/platformer.dir/src/Platform.cpp.s
+.PHONY : src/Platform.cpp.s
+
+src/PlatformerGame.o: src/PlatformerGame.cpp.o
+
+.PHONY : src/PlatformerGame.o
+
+# target to build an object file
+src/PlatformerGame.cpp.o:
+	$(MAKE) -f CMakeFiles/platformer_tests.dir/build.make CMakeFiles/platformer_tests.dir/src/PlatformerGame.cpp.o
+	$(MAKE) -f CMakeFiles/platformer.dir/build.make CMakeFiles/platformer.dir/src/PlatformerGame.cpp.o
+.PHONY : src/PlatformerGame.cpp.o
+
+src/PlatformerGame.i: src/PlatformerGame.cpp.i
+
+.PHONY : src/PlatformerGame.i
+
+# target to preprocess a source file
+src/PlatformerGame.cpp.i:
+	$(MAKE) -f CMakeFiles/platformer_tests.dir/build.make CMakeFiles/platformer_tests.dir/src/PlatformerGame.cpp.i
+	$(MAKE) -f CMakeFiles/platformer.dir/build.make CMakeFiles/platformer.dir/src/PlatformerGame.cpp.i
+.PHONY : src/PlatformerGame.cpp.i
+
+src/PlatformerGame.s: src/PlatformerGame.cpp.s
+
+.PHONY : src/PlatformerGame.s
+
+# target to generate assembly for a file
+src/PlatformerGame.cpp.s:
+	$(MAKE) -f CMakeFiles/platformer_tests.dir/build.make CMakeFiles/platformer_tests.dir/src/PlatformerGame.cpp.s
+	$(MAKE) -f CMakeFiles/platformer.dir/build.make CMakeFiles/platformer.dir/src/PlatformerGame.cpp.s
+.PHONY : src/PlatformerGame.cpp.s
+
+src/Player.o: src/Player.cpp.o
+
+.PHONY : src/Player.o
+
+# target to build an object file
+src/Player.cpp.o:
+	$(MAKE) -f CMakeFiles/platformer_tests.dir/build.make CMakeFiles/platformer_tests.dir/src/Player.cpp.o
+	$(MAKE) -f CMakeFiles/platformer.dir/build.make CMakeFiles/platformer.dir/src/Player.cpp.o
+.PHONY : src/Player.cpp.o
+
+src/Player.i: src/Player.cpp.i
+
+.PHONY : src/Player.i
+
+# target to preprocess a source file
+src/Player.cpp.i:
+	$(MAKE) -f CMakeFiles/platformer_tests.dir/build.make CMakeFiles/platformer_tests.dir/src/Player.cpp.i
+	$(MAKE) -f CMakeFiles/platformer.dir/build.make CMakeFiles/platformer.dir/src/Player.cpp.i
+.PHONY : src/Player.cpp.i
+
+src/Player.s: src/Player.cpp.s
+
+.PHONY : src/Player.s
+
+# target to generate assembly for a file
+src/Player.cpp.s:
+	$(MAKE) -f CMakeFiles/platformer_tests.dir/build.make CMakeFiles/platformer_tests.dir/src/Player.cpp.s
+	$(MAKE) -f CMakeFiles/platformer.dir/build.make CMakeFiles/platformer.dir/src/Player.cpp.s
+.PHONY : src/Player.cpp.s
+
+src/configloader.o: src/configloader.cpp.o
+
+.PHONY : src/configloader.o
+
+# target to build an object file
+src/configloader.cpp.o:
+	$(MAKE) -f CMakeFiles/platformer_tests.dir/build.make CMakeFiles/platformer_tests.dir/src/configloader.cpp.o
+	$(MAKE) -f CMakeFiles/platformer.dir/build.make CMakeFiles/platformer.dir/src/configloader.cpp.o
+.PHONY : src/configloader.cpp.o
+
+src/configloader.i: src/configloader.cpp.i
+
+.PHONY : src/configloader.i
+
+# target to preprocess a source file
+src/configloader.cpp.i:
+	$(MAKE) -f CMakeFiles/platformer_tests.dir/build.make CMakeFiles/platformer_tests.dir/src/configloader.cpp.i
+	$(MAKE) -f CMakeFiles/platformer.dir/build.make CMakeFiles/platformer.dir/src/configloader.cpp.i
+.PHONY : src/configloader.cpp.i
+
+src/configloader.s: src/configloader.cpp.s
+
+.PHONY : src/configloader.s
+
+# target to generate assembly for a file
+src/configloader.cpp.s:
+	$(MAKE) -f CMakeFiles/platformer_tests.dir/build.make CMakeFiles/platformer_tests.dir/src/configloader.cpp.s
+	$(MAKE) -f CMakeFiles/platformer.dir/build.make CMakeFiles/platformer.dir/src/configloader.cpp.s
+.PHONY : src/configloader.cpp.s
+
+src/gameobjectfactory.o: src/gameobjectfactory.cpp.o
+
+.PHONY : src/gameobjectfactory.o
+
+# target to build an object file
+src/gameobjectfactory.cpp.o:
+	$(MAKE) -f CMakeFiles/platformer_tests.dir/build.make CMakeFiles/platformer_tests.dir/src/gameobjectfactory.cpp.o
+	$(MAKE) -f CMakeFiles/platformer.dir/build.make CMakeFiles/platformer.dir/src/gameobjectfactory.cpp.o
+.PHONY : src/gameobjectfactory.cpp.o
+
+src/gameobjectfactory.i: src/gameobjectfactory.cpp.i
+
+.PHONY : src/gameobjectfactory.i
+
+# target to preprocess a source file
+src/gameobjectfactory.cpp.i:
+	$(MAKE) -f CMakeFiles/platformer_tests.dir/build.make CMakeFiles/platformer_tests.dir/src/gameobjectfactory.cpp.i
+	$(MAKE) -f CMakeFiles/platformer.dir/build.make CMakeFiles/platformer.dir/src/gameobjectfactory.cpp.i
+.PHONY : src/gameobjectfactory.cpp.i
+
+src/gameobjectfactory.s: src/gameobjectfactory.cpp.s
+
+.PHONY : src/gameobjectfactory.s
+
+# target to generate assembly for a file
+src/gameobjectfactory.cpp.s:
+	$(MAKE) -f CMakeFiles/platformer_tests.dir/build.make CMakeFiles/platformer_tests.dir/src/gameobjectfactory.cpp.s
+	$(MAKE) -f CMakeFiles/platformer.dir/build.make CMakeFiles/platformer.dir/src/gameobjectfactory.cpp.s
+.PHONY : src/gameobjectfactory.cpp.s
+
+src/jsonHelper.o: src/jsonHelper.cpp.o
+
+.PHONY : src/jsonHelper.o
+
+# target to build an object file
+src/jsonHelper.cpp.o:
+	$(MAKE) -f CMakeFiles/platformer_tests.dir/build.make CMakeFiles/platformer_tests.dir/src/jsonHelper.cpp.o
+	$(MAKE) -f CMakeFiles/platformer.dir/build.make CMakeFiles/platformer.dir/src/jsonHelper.cpp.o
+.PHONY : src/jsonHelper.cpp.o
+
+src/jsonHelper.i: src/jsonHelper.cpp.i
+
+.PHONY : src/jsonHelper.i
+
+# target to preprocess a source file
+src/jsonHelper.cpp.i:
+	$(MAKE) -f CMakeFiles/platformer_tests.dir/build.make CMakeFiles/platformer_tests.dir/src/jsonHelper.cpp.i
+	$(MAKE) -f CMakeFiles/platformer.dir/build.make CMakeFiles/platformer.dir/src/jsonHelper.cpp.i
+.PHONY : src/jsonHelper.cpp.i
+
+src/jsonHelper.s: src/jsonHelper.cpp.s
+
+.PHONY : src/jsonHelper.s
+
+# target to generate assembly for a file
+src/jsonHelper.cpp.s:
+	$(MAKE) -f CMakeFiles/platformer_tests.dir/build.make CMakeFiles/platformer_tests.dir/src/jsonHelper.cpp.s
+	$(MAKE) -f CMakeFiles/platformer.dir/build.make CMakeFiles/platformer.dir/src/jsonHelper.cpp.s
+.PHONY : src/jsonHelper.cpp.s
+
+src/levelloader.o: src/levelloader.cpp.o
+
+.PHONY : src/levelloader.o
+
+# target to build an object file
+src/levelloader.cpp.o:
+	$(MAKE) -f CMakeFiles/platformer_tests.dir/build.make CMakeFiles/platformer_tests.dir/src/levelloader.cpp.o
+	$(MAKE) -f CMakeFiles/platformer.dir/build.make CMakeFiles/platformer.dir/src/levelloader.cpp.o
+.PHONY : src/levelloader.cpp.o
+
+src/levelloader.i: src/levelloader.cpp.i
+
+.PHONY : src/levelloader.i
+
+# target to preprocess a source file
+src/levelloader.cpp.i:
+	$(MAKE) -f CMakeFiles/platformer_tests.dir/build.make CMakeFiles/platformer_tests.dir/src/levelloader.cpp.i
+	$(MAKE) -f CMakeFiles/platformer.dir/build.make CMakeFiles/platformer.dir/src/levelloader.cpp.i
+.PHONY : src/levelloader.cpp.i
+
+src/levelloader.s: src/levelloader.cpp.s
+
+.PHONY : src/levelloader.s
+
+# target to generate assembly for a file
+src/levelloader.cpp.s:
+	$(MAKE) -f CMakeFiles/platformer_tests.dir/build.make CMakeFiles/platformer_tests.dir/src/levelloader.cpp.s
+	$(MAKE) -f CMakeFiles/platformer.dir/build.make CMakeFiles/platformer.dir/src/levelloader.cpp.s
+.PHONY : src/levelloader.cpp.s
+
 src/main.o: src/main.cpp.o
 
 .PHONY : src/main.o
@@ -162,6 +402,36 @@ src/main.s: src/main.cpp.s
 src/main.cpp.s:
 	$(MAKE) -f CMakeFiles/platformer.dir/build.make CMakeFiles/platformer.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
+
+src/physics.o: src/physics.cpp.o
+
+.PHONY : src/physics.o
+
+# target to build an object file
+src/physics.cpp.o:
+	$(MAKE) -f CMakeFiles/platformer_tests.dir/build.make CMakeFiles/platformer_tests.dir/src/physics.cpp.o
+	$(MAKE) -f CMakeFiles/platformer.dir/build.make CMakeFiles/platformer.dir/src/physics.cpp.o
+.PHONY : src/physics.cpp.o
+
+src/physics.i: src/physics.cpp.i
+
+.PHONY : src/physics.i
+
+# target to preprocess a source file
+src/physics.cpp.i:
+	$(MAKE) -f CMakeFiles/platformer_tests.dir/build.make CMakeFiles/platformer_tests.dir/src/physics.cpp.i
+	$(MAKE) -f CMakeFiles/platformer.dir/build.make CMakeFiles/platformer.dir/src/physics.cpp.i
+.PHONY : src/physics.cpp.i
+
+src/physics.s: src/physics.cpp.s
+
+.PHONY : src/physics.s
+
+# target to generate assembly for a file
+src/physics.cpp.s:
+	$(MAKE) -f CMakeFiles/platformer_tests.dir/build.make CMakeFiles/platformer_tests.dir/src/physics.cpp.s
+	$(MAKE) -f CMakeFiles/platformer.dir/build.make CMakeFiles/platformer.dir/src/physics.cpp.s
+.PHONY : src/physics.cpp.s
 
 tests/tests.o: tests/tests.cpp.o
 
@@ -227,9 +497,36 @@ help:
 	@echo "... edit_cache"
 	@echo "... platformer_tests"
 	@echo "... platformer"
+	@echo "... src/GameObject.o"
+	@echo "... src/GameObject.i"
+	@echo "... src/GameObject.s"
+	@echo "... src/Platform.o"
+	@echo "... src/Platform.i"
+	@echo "... src/Platform.s"
+	@echo "... src/PlatformerGame.o"
+	@echo "... src/PlatformerGame.i"
+	@echo "... src/PlatformerGame.s"
+	@echo "... src/Player.o"
+	@echo "... src/Player.i"
+	@echo "... src/Player.s"
+	@echo "... src/configloader.o"
+	@echo "... src/configloader.i"
+	@echo "... src/configloader.s"
+	@echo "... src/gameobjectfactory.o"
+	@echo "... src/gameobjectfactory.i"
+	@echo "... src/gameobjectfactory.s"
+	@echo "... src/jsonHelper.o"
+	@echo "... src/jsonHelper.i"
+	@echo "... src/jsonHelper.s"
+	@echo "... src/levelloader.o"
+	@echo "... src/levelloader.i"
+	@echo "... src/levelloader.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/physics.o"
+	@echo "... src/physics.i"
+	@echo "... src/physics.s"
 	@echo "... tests/tests.o"
 	@echo "... tests/tests.i"
 	@echo "... tests/tests.s"

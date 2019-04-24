@@ -10,7 +10,7 @@
 
 #include "Player.hpp"
 
-Player::Player(const sf::Texture & texture, const sf::Vector2f & position, const sf::Vector2f & velocity, const sf::Vector2f & size, const  bool & isStatic) 
+Player::Player(const sf::Texture & texture, const sf::Vector2f & position, const sf::Vector2f & velocity, const sf::Vector2f & size, bool isStatic) 
     :GameObject(texture, position, velocity, size, isStatic)
 {   
 }

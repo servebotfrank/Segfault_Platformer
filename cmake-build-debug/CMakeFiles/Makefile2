@@ -71,7 +71,7 @@ CMAKE_BINARY_DIR = /Users/erintolman/Desktop/Segfault_Platformer/cmake-build-deb
 CMakeFiles/platformer_tests.dir/all:
 	$(MAKE) -f CMakeFiles/platformer_tests.dir/build.make CMakeFiles/platformer_tests.dir/depend
 	$(MAKE) -f CMakeFiles/platformer_tests.dir/build.make CMakeFiles/platformer_tests.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/erintolman/Desktop/Segfault_Platformer/cmake-build-debug/CMakeFiles --progress-num=3,4,5 "Built target platformer_tests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/erintolman/Desktop/Segfault_Platformer/cmake-build-debug/CMakeFiles --progress-num=12,13,14,15,16,17,18,19,20,21,22,23 "Built target platformer_tests"
 .PHONY : CMakeFiles/platformer_tests.dir/all
 
 # Include target in all.
@@ -81,7 +81,7 @@ all: CMakeFiles/platformer_tests.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/platformer_tests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/erintolman/Desktop/Segfault_Platformer/cmake-build-debug/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/erintolman/Desktop/Segfault_Platformer/cmake-build-debug/CMakeFiles 12
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/platformer_tests.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/erintolman/Desktop/Segfault_Platformer/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/platformer_tests.dir/rule
@@ -108,7 +108,7 @@ clean: CMakeFiles/platformer_tests.dir/clean
 CMakeFiles/platformer.dir/all:
 	$(MAKE) -f CMakeFiles/platformer.dir/build.make CMakeFiles/platformer.dir/depend
 	$(MAKE) -f CMakeFiles/platformer.dir/build.make CMakeFiles/platformer.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/erintolman/Desktop/Segfault_Platformer/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target platformer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/erintolman/Desktop/Segfault_Platformer/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11 "Built target platformer"
 .PHONY : CMakeFiles/platformer.dir/all
 
 # Include target in all.
@@ -118,7 +118,7 @@ all: CMakeFiles/platformer.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/platformer.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/erintolman/Desktop/Segfault_Platformer/cmake-build-debug/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/erintolman/Desktop/Segfault_Platformer/cmake-build-debug/CMakeFiles 11
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/platformer.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/erintolman/Desktop/Segfault_Platformer/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/platformer.dir/rule

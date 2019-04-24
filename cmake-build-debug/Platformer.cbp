@@ -126,7 +126,79 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/erintolman/Desktop/Segfault_Platformer/src/GameObject.cpp">
+			<Option target="platformer_tests"/>
+			<Option target="platformer"/>
+		</Unit>
+		<Unit filename="/Users/erintolman/Desktop/Segfault_Platformer/src/GameObject.hpp">
+			<Option target="platformer_tests"/>
+			<Option target="platformer"/>
+		</Unit>
+		<Unit filename="/Users/erintolman/Desktop/Segfault_Platformer/src/Platform.cpp">
+			<Option target="platformer_tests"/>
+			<Option target="platformer"/>
+		</Unit>
+		<Unit filename="/Users/erintolman/Desktop/Segfault_Platformer/src/Platform.hpp">
+			<Option target="platformer_tests"/>
+			<Option target="platformer"/>
+		</Unit>
+		<Unit filename="/Users/erintolman/Desktop/Segfault_Platformer/src/PlatformerGame.cpp">
+			<Option target="platformer_tests"/>
+			<Option target="platformer"/>
+		</Unit>
+		<Unit filename="/Users/erintolman/Desktop/Segfault_Platformer/src/PlatformerGame.hpp">
+			<Option target="platformer_tests"/>
+			<Option target="platformer"/>
+		</Unit>
+		<Unit filename="/Users/erintolman/Desktop/Segfault_Platformer/src/Player.cpp">
+			<Option target="platformer_tests"/>
+			<Option target="platformer"/>
+		</Unit>
+		<Unit filename="/Users/erintolman/Desktop/Segfault_Platformer/src/Player.hpp">
+			<Option target="platformer_tests"/>
+			<Option target="platformer"/>
+		</Unit>
+		<Unit filename="/Users/erintolman/Desktop/Segfault_Platformer/src/configloader.cpp">
+			<Option target="platformer_tests"/>
+			<Option target="platformer"/>
+		</Unit>
+		<Unit filename="/Users/erintolman/Desktop/Segfault_Platformer/src/configloader.hpp">
+			<Option target="platformer_tests"/>
+			<Option target="platformer"/>
+		</Unit>
+		<Unit filename="/Users/erintolman/Desktop/Segfault_Platformer/src/gameobjectfactory.cpp">
+			<Option target="platformer_tests"/>
+			<Option target="platformer"/>
+		</Unit>
+		<Unit filename="/Users/erintolman/Desktop/Segfault_Platformer/src/gameobjectfactory.hpp">
+			<Option target="platformer_tests"/>
+			<Option target="platformer"/>
+		</Unit>
+		<Unit filename="/Users/erintolman/Desktop/Segfault_Platformer/src/jsonHelper.cpp">
+			<Option target="platformer_tests"/>
+			<Option target="platformer"/>
+		</Unit>
+		<Unit filename="/Users/erintolman/Desktop/Segfault_Platformer/src/jsonHelper.hpp">
+			<Option target="platformer_tests"/>
+			<Option target="platformer"/>
+		</Unit>
+		<Unit filename="/Users/erintolman/Desktop/Segfault_Platformer/src/levelloader.cpp">
+			<Option target="platformer_tests"/>
+			<Option target="platformer"/>
+		</Unit>
+		<Unit filename="/Users/erintolman/Desktop/Segfault_Platformer/src/levelloader.hpp">
+			<Option target="platformer_tests"/>
+			<Option target="platformer"/>
+		</Unit>
 		<Unit filename="/Users/erintolman/Desktop/Segfault_Platformer/src/main.cpp">
+			<Option target="platformer"/>
+		</Unit>
+		<Unit filename="/Users/erintolman/Desktop/Segfault_Platformer/src/physics.cpp">
+			<Option target="platformer_tests"/>
+			<Option target="platformer"/>
+		</Unit>
+		<Unit filename="/Users/erintolman/Desktop/Segfault_Platformer/src/physics.hpp">
+			<Option target="platformer_tests"/>
 			<Option target="platformer"/>
 		</Unit>
 		<Unit filename="/Users/erintolman/Desktop/Segfault_Platformer/tests/catch.hpp">

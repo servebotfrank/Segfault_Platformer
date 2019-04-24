@@ -1,6 +1,9 @@
 #ignore these folders
 .vscode/
 
+build/*
+bin/*
+
 # object files
 *.slo
 *.lo

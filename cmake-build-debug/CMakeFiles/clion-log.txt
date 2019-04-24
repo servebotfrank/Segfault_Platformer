@@ -1,19 +1,7 @@
 /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -G "CodeBlocks - Unix Makefiles" /Users/erintolman/Desktop/Segfault_Platformer
-CMake Error at CMakeLists.txt:4 (find_package):
-  By not providing "FindSFML.cmake" in CMAKE_MODULE_PATH this project has
-  asked CMake to find a package configuration file provided by "SFML", but
-  CMake did not find one.
-
-  Could not find a package configuration file provided by "SFML" (requested
-  version 2.5) with any of the following names:
-
-    SFMLConfig.cmake
-    sfml-config.cmake
-
-  Add the installation prefix of "SFML" to CMAKE_PREFIX_PATH or set
-  "SFML_DIR" to a directory containing one of the above files.  If "SFML"
-  provides a separate development package or SDK, be sure it has been
-  installed.
+CMake Error at CMakeLists.txt:10:
+  Parse error.  Expected a command name, got unquoted argument with text
+  "=======".
 
 
 -- Configuring incomplete, errors occurred!

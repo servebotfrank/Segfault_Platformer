@@ -1,0 +1,36 @@
+{
+    "name": "test level",
+    "background texture": "bg00.png",
+    "textures": [
+        {
+            "path": "groundTile02.png",
+            "tile size": { "x": 64, "y": 64 }
+        },
+        {
+            "path": "player00.png",
+            "tile size": { "x": 64, "y": 64 }
+        }
+    ],
+    "game objects": [
+        {
+            "name": "player",
+            "type": "player",
+            "position": { "x": 0, "y": 0 },
+            "velocity": { "x": 0, "y": 0 },
+            "is static": false,
+            "size": { "width": 1, "height": 1 },
+            "texture": "player00.png",
+            "tiles": [0]
+        },
+        {
+            "name": "platform1",
+            "type": "platform",
+            "position": { "x": 0, "y": -1 },
+            "velocity": { "x": 0, "y": 0 },
+            "is static": true,
+            "size": { "width": 5, "height": 1 },
+            "texture": "groundTile02.png",
+            "tiles": [0, 0, 0, 0]
+        }
+    ]
+}
