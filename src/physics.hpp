@@ -18,6 +18,8 @@ public:
 
 Physics(const sf::Vector2f & position, const sf::Vector2f & velocity, const sf::Vector2f & size, bool isStatic);
 
+bool collision(const Physics & other);
+
 sf::Vector2f getPosition() const;
 sf::Vector2f getVelocity() const;
 sf::Vector2f getSize() const;
