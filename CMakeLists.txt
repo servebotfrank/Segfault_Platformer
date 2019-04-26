@@ -1,7 +1,7 @@
 cmake_minimum_required (VERSION 3.5 FATAL_ERROR)
 project (Platformer VERSION 0.1 LANGUAGES CXX)
 
-find_package(SFML 2.4 COMPONENTS system window graphics REQUIRED)
+find_package(SFML 2.4 COMPONENTS audio system window graphics REQUIRED)
 
 set (SOURCES
     src/configloader.cpp
@@ -48,10 +48,10 @@ set_target_properties(platformer_tests PROPERTIES
     RUNTIME_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/bin/"
 )
 
-target_link_libraries(platformer PRIVATE
+target_link_libraries(platformer
     sfml-audio sfml-graphics sfml-window sfml-system sfml-main)
 
-target_link_libraries(platformer_tests PRIVATE
+target_link_libraries(platformer_tests
     sfml-audio sfml-graphics sfml-window sfml-system sfml-main)
 
 set (GNU_COMPILE_OPTIONS
