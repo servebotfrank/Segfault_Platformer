@@ -1,7 +1,7 @@
 cmake_minimum_required (VERSION 3.5 FATAL_ERROR)
 project (Platformer VERSION 0.1 LANGUAGES CXX)
 
-find_package(SFML 2.4 COMPONENTS audio system window graphics REQUIRED)
+find_package(SFML 2.5 COMPONENTS system window graphics REQUIRED)
 
 set (SOURCES
     src/configloader.cpp
@@ -26,11 +26,6 @@ set (SOURCES
 set (MAIN_SOURCE
     src/main.cpp
 )
-set (TEST_SOURCES
-    tests/catch.hpp
-    tests/tests_main.cpp
-    tests/tests.cpp
-)
 
 add_executable (platformer ${MAIN_SOURCE} ${SOURCES})
 set_target_properties(platformer PROPERTIES
@@ -40,19 +35,8 @@ set_target_properties(platformer PROPERTIES
     RUNTIME_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/bin/"
 )
 
-add_executable (platformer_tests ${TEST_SOURCES} ${SOURCES})
-set_target_properties(platformer_tests PROPERTIES
-    CXX_STANDARD 17
-    CXX_STANDARD_REQUIRED YES
-    CXX_EXTENSIONS NO
-    RUNTIME_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/bin/"
-)
-
-target_link_libraries(platformer
-    sfml-audio sfml-graphics sfml-window sfml-system sfml-main)
-
-target_link_libraries(platformer_tests
-    sfml-audio sfml-graphics sfml-window sfml-system sfml-main)
+target_link_libraries(platformer PRIVATE
+    sfml-graphics)
 
 set (GNU_COMPILE_OPTIONS
     -ansi
@@ -73,11 +57,8 @@ set (MSVC_COMPILE_OPTIONS
 
 if (GNU)
     target_compile_options (${platformer} PRIVATE ${GNU_COMPILE_OPTIONS})
-    target_compile_options (${platformer_tests} PRIVATE ${GNU_COMPILE_OPTIONS})
 elseif (clang)
     target_compile_options (${platformer} PRIVATE ${CLANG_COMPILE_OPTIONS})
-    target_compile_options (${platformer_tests} PRIVATE ${CLANG_COMPILE_OPTIONS})
 elseif (MSVC)
     target_compile_options (${platformer} PRIVATE ${MSVC_COMPILE_OPTIONS})
-    target_compile_options (${platformer_tests} PRIVATE ${MSVC_COMPILE_OPTIONS})
 endif ()
