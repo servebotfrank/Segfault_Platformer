@@ -32,3 +32,11 @@ bool Physics::isGrounded()
 {
 	return true;
 }
+
+bool Physics::collision(const Physics & other)
+{
+	return _position.x + _size.x/2.0 > other.getPosition().x - other.getSize().x/2.0 &&
+	 _position.x + _size.x/2.0 < other.getPosition().x + other.getSize().x/2 && 
+	 _position.y - _size.y/2.0 > other.getPosition().y + other.getSize().y/2 &&
+	 _position.y + _size.y/2.0 < other.getPosition().y - other.getSize().y/2;
+}
