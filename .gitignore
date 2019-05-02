@@ -1,5 +1,8 @@
 #ignore these folders
 .vscode/
+.idea/
+.CMake/
+.cmake-build-debug/
 
 build/*
 bin/*

@@ -1,8 +1,0 @@
-/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -G "CodeBlocks - Unix Makefiles" /Users/erintolman/Desktop/Segfault_Platformer
-CMake Error at CMakeLists.txt:10:
-  Parse error.  Expected a command name, got unquoted argument with text
-  "=======".
-
-
--- Configuring incomplete, errors occurred!
-See also "/Users/erintolman/Desktop/Segfault_Platformer/cmake-build-debug/CMakeFiles/CMakeOutput.log".
