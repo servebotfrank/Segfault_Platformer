@@ -1,0 +1,4 @@
+/Users/erintolman/Desktop/Segfault_Platformer/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/erintolman/Desktop/Segfault_Platformer/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/erintolman/Desktop/Segfault_Platformer/cmake-build-debug/CMakeFiles/platformer_tests.dir
+/Users/erintolman/Desktop/Segfault_Platformer/cmake-build-debug/CMakeFiles/platformer.dir

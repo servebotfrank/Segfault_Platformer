@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="Platformer" targetName="platformer_tests" />
+      <config projectName="Platformer" targetName="platformer" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" GENERATION_OPTIONS="-DCMAKE_EXPORT_COMPILE_COMMANDS=ON" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e7820cee-3f3b-4763-9575-91522575bf67" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/assets/config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/levels/levelschema.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/levels/testlevel.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/bg00.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/enemy00.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/groundTile00.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/groundTile02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/player00.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/PlatformerGame.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/PlatformerGame.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/configloader.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/configloader.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gameobjectfactory.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gameobjectfactory.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/jsonHelper.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/jsonHelper.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/levelloader.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/levelloader.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rapidjson/allocators.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rapidjson/cursorstreamwrapper.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rapidjson/document.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rapidjson/encodedstream.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rapidjson/encodings.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rapidjson/error/en.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rapidjson/error/error.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rapidjson/filereadstream.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rapidjson/filewritestream.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rapidjson/fwd.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rapidjson/internal/biginteger.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rapidjson/internal/diyfp.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rapidjson/internal/dtoa.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rapidjson/internal/ieee754.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rapidjson/internal/itoa.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rapidjson/internal/meta.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rapidjson/internal/pow10.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rapidjson/internal/regex.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rapidjson/internal/stack.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rapidjson/internal/strfunc.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rapidjson/internal/strtod.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rapidjson/internal/swap.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rapidjson/istreamwrapper.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rapidjson/memorybuffer.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rapidjson/memorystream.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rapidjson/msinttypes/inttypes.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rapidjson/msinttypes/stdint.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rapidjson/ostreamwrapper.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rapidjson/pointer.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rapidjson/prettywriter.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rapidjson/rapidjson.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rapidjson/reader.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rapidjson/schema.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rapidjson/stream.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rapidjson/stringbuffer.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rapidjson/writer.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/platformer" beforeDir="false" afterPath="$PROJECT_DIR$/bin/platformer" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GameObject.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameObject.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GameObject.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameObject.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Platform.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Platform.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Platform.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Platform.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Player.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Player.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/physics.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/physics.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/physics.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/physics.hpp" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1230">
+              <caret line="82" column="8" selection-start-line="82" selection-start-column="8" selection-end-line="82" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/GameObject.cpp">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/physics.cpp">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/physics.hpp">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CMake/FindSFML.cmake">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="465">
+              <caret line="31" column="20" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Platform.cpp">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Platform.hpp">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/tests.cpp">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/tests_main.cpp">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CMakeLists.txt" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="20" />
+    <option name="y" value="23" />
+    <option name="width" value="1260" />
+    <option name="height" value="704" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Platformer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Segfault_Platformer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Platformer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Segfault_Platformer" type="462c0819:PsiDirectoryNode" />
+              <item name="CMake" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Platformer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Segfault_Platformer" type="462c0819:PsiDirectoryNode" />
+              <item name="cmake-build-debug" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Platformer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Segfault_Platformer" type="462c0819:PsiDirectoryNode" />
+              <item name="cmake-build-debug" type="462c0819:PsiDirectoryNode" />
+              <item name="CMakeFiles" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Platformer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Segfault_Platformer" type="462c0819:PsiDirectoryNode" />
+              <item name="cmake-build-debug" type="462c0819:PsiDirectoryNode" />
+              <item name="CMakeFiles" type="462c0819:PsiDirectoryNode" />
+              <item name="3.13.2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Platformer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Segfault_Platformer" type="462c0819:PsiDirectoryNode" />
+              <item name="cmake-build-debug" type="462c0819:PsiDirectoryNode" />
+              <item name="CMakeFiles" type="462c0819:PsiDirectoryNode" />
+              <item name="platformer.dir" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Platformer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Segfault_Platformer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="tasks" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/cmake-build-debug/CMakeFiles" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/cmake-build-debug/CMakeFiles" />
+      <recent name="$PROJECT_DIR$/cmake" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.platformer">
+    <configuration name="platformer" type="CMakeRunConfiguration" factoryName="Application" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Platformer" TARGET_NAME="platformer" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Platformer" RUN_TARGET_NAME="platformer">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="platformer_tests" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Platformer" TARGET_NAME="platformer_tests" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Platformer" RUN_TARGET_NAME="platformer_tests">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.platformer" />
+      <item itemvalue="Application.platformer_tests" />
+    </list>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>$USER_HOME$/.subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e7820cee-3f3b-4763-9575-91522575bf67" name="Default Changelist" comment="" />
+      <created>1554768215431</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1554768215431</updated>
+      <workItem from="1554768217073" duration="2954000" />
+      <workItem from="1555094186011" duration="4044000" />
+      <workItem from="1555114528387" duration="629000" />
+      <workItem from="1555188628247" duration="257000" />
+      <workItem from="1555188900051" duration="691000" />
+      <workItem from="1555189807982" duration="2984000" />
+      <workItem from="1555194151086" duration="282000" />
+      <workItem from="1555546384660" duration="1139000" />
+      <workItem from="1555719756202" duration="319000" />
+      <workItem from="1555975353980" duration="818000" />
+      <workItem from="1556137054507" duration="458000" />
+      <workItem from="1556137927972" duration="11000" />
+      <workItem from="1556138081650" duration="475000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="15061000" />
+  </component>
+  <component name="TodoView" selected-index="3">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="20" y="23" width="1260" height="704" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4939173" visible="true" weight="0.3004926" />
+      <window_info id="Structure" order="1" sideWeight="0.5060827" side_tool="true" weight="0.26929393" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49835795" weight="0.3298969" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49835795" visible="true" weight="0.32843137" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49917898" weight="0.39869282" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49753696" weight="0.32843137" />
+      <window_info anchor="bottom" id="Database Changes" order="7" />
+      <window_info anchor="bottom" id="Messages" order="8" sideWeight="0.4827586" weight="0.3120915" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49671593" weight="0.34477124" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50164205" side_tool="true" visible="true" weight="0.32843137" />
+      <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.49507388" weight="0.32843137" />
+      <window_info anchor="bottom" id="CMake" order="12" sideWeight="0.48029557" weight="0.32843137" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="LuaJ" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/../CS372_Battleship/cmake_modules/FindSFML.cmake">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1627" />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/SFML-2.4.2-osx-clang 2/cmake/Modules/FindSFML.cmake" />
+    <entry file="file://$PROJECT_DIR$/cmake/CMakeLists.txt" />
+    <entry file="file://$PROJECT_DIR$/tests/catch.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60645">
+          <caret line="4043" column="7" selection-start-line="4043" selection-start-column="7" selection-end-line="4043" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GameObject.cpp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/physics.cpp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/physics.hpp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Platform.cpp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Platform.hpp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/tests.cpp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/tests_main.cpp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMake/FindSFML.cmake">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="20" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1230">
+          <caret line="82" column="8" selection-start-line="82" selection-start-column="8" selection-end-line="82" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

@@ -1,0 +1,107 @@
+[
+{
+  "directory": "/Users/erintolman/Desktop/Segfault_Platformer/cmake-build-debug",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -isystem /usr/local/include  -g   -std=c++1z -o CMakeFiles/platformer_tests.dir/tests/tests_main.cpp.o -c /Users/erintolman/Desktop/Segfault_Platformer/tests/tests_main.cpp",
+  "file": "/Users/erintolman/Desktop/Segfault_Platformer/tests/tests_main.cpp"
+},
+{
+  "directory": "/Users/erintolman/Desktop/Segfault_Platformer/cmake-build-debug",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -isystem /usr/local/include  -g   -std=c++1z -o CMakeFiles/platformer_tests.dir/tests/tests.cpp.o -c /Users/erintolman/Desktop/Segfault_Platformer/tests/tests.cpp",
+  "file": "/Users/erintolman/Desktop/Segfault_Platformer/tests/tests.cpp"
+},
+{
+  "directory": "/Users/erintolman/Desktop/Segfault_Platformer/cmake-build-debug",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -isystem /usr/local/include  -g   -std=c++1z -o CMakeFiles/platformer_tests.dir/src/configloader.cpp.o -c /Users/erintolman/Desktop/Segfault_Platformer/src/configloader.cpp",
+  "file": "/Users/erintolman/Desktop/Segfault_Platformer/src/configloader.cpp"
+},
+{
+  "directory": "/Users/erintolman/Desktop/Segfault_Platformer/cmake-build-debug",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -isystem /usr/local/include  -g   -std=c++1z -o CMakeFiles/platformer_tests.dir/src/GameObject.cpp.o -c /Users/erintolman/Desktop/Segfault_Platformer/src/GameObject.cpp",
+  "file": "/Users/erintolman/Desktop/Segfault_Platformer/src/GameObject.cpp"
+},
+{
+  "directory": "/Users/erintolman/Desktop/Segfault_Platformer/cmake-build-debug",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -isystem /usr/local/include  -g   -std=c++1z -o CMakeFiles/platformer_tests.dir/src/gameobjectfactory.cpp.o -c /Users/erintolman/Desktop/Segfault_Platformer/src/gameobjectfactory.cpp",
+  "file": "/Users/erintolman/Desktop/Segfault_Platformer/src/gameobjectfactory.cpp"
+},
+{
+  "directory": "/Users/erintolman/Desktop/Segfault_Platformer/cmake-build-debug",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -isystem /usr/local/include  -g   -std=c++1z -o CMakeFiles/platformer_tests.dir/src/jsonHelper.cpp.o -c /Users/erintolman/Desktop/Segfault_Platformer/src/jsonHelper.cpp",
+  "file": "/Users/erintolman/Desktop/Segfault_Platformer/src/jsonHelper.cpp"
+},
+{
+  "directory": "/Users/erintolman/Desktop/Segfault_Platformer/cmake-build-debug",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -isystem /usr/local/include  -g   -std=c++1z -o CMakeFiles/platformer_tests.dir/src/levelloader.cpp.o -c /Users/erintolman/Desktop/Segfault_Platformer/src/levelloader.cpp",
+  "file": "/Users/erintolman/Desktop/Segfault_Platformer/src/levelloader.cpp"
+},
+{
+  "directory": "/Users/erintolman/Desktop/Segfault_Platformer/cmake-build-debug",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -isystem /usr/local/include  -g   -std=c++1z -o CMakeFiles/platformer_tests.dir/src/physics.cpp.o -c /Users/erintolman/Desktop/Segfault_Platformer/src/physics.cpp",
+  "file": "/Users/erintolman/Desktop/Segfault_Platformer/src/physics.cpp"
+},
+{
+  "directory": "/Users/erintolman/Desktop/Segfault_Platformer/cmake-build-debug",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -isystem /usr/local/include  -g   -std=c++1z -o CMakeFiles/platformer_tests.dir/src/Platform.cpp.o -c /Users/erintolman/Desktop/Segfault_Platformer/src/Platform.cpp",
+  "file": "/Users/erintolman/Desktop/Segfault_Platformer/src/Platform.cpp"
+},
+{
+  "directory": "/Users/erintolman/Desktop/Segfault_Platformer/cmake-build-debug",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -isystem /usr/local/include  -g   -std=c++1z -o CMakeFiles/platformer_tests.dir/src/PlatformerGame.cpp.o -c /Users/erintolman/Desktop/Segfault_Platformer/src/PlatformerGame.cpp",
+  "file": "/Users/erintolman/Desktop/Segfault_Platformer/src/PlatformerGame.cpp"
+},
+{
+  "directory": "/Users/erintolman/Desktop/Segfault_Platformer/cmake-build-debug",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -isystem /usr/local/include  -g   -std=c++1z -o CMakeFiles/platformer_tests.dir/src/Player.cpp.o -c /Users/erintolman/Desktop/Segfault_Platformer/src/Player.cpp",
+  "file": "/Users/erintolman/Desktop/Segfault_Platformer/src/Player.cpp"
+},
+{
+  "directory": "/Users/erintolman/Desktop/Segfault_Platformer/cmake-build-debug",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -isystem /usr/local/include  -g   -std=c++1z -o CMakeFiles/platformer.dir/src/main.cpp.o -c /Users/erintolman/Desktop/Segfault_Platformer/src/main.cpp",
+  "file": "/Users/erintolman/Desktop/Segfault_Platformer/src/main.cpp"
+},
+{
+  "directory": "/Users/erintolman/Desktop/Segfault_Platformer/cmake-build-debug",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -isystem /usr/local/include  -g   -std=c++1z -o CMakeFiles/platformer.dir/src/configloader.cpp.o -c /Users/erintolman/Desktop/Segfault_Platformer/src/configloader.cpp",
+  "file": "/Users/erintolman/Desktop/Segfault_Platformer/src/configloader.cpp"
+},
+{
+  "directory": "/Users/erintolman/Desktop/Segfault_Platformer/cmake-build-debug",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -isystem /usr/local/include  -g   -std=c++1z -o CMakeFiles/platformer.dir/src/GameObject.cpp.o -c /Users/erintolman/Desktop/Segfault_Platformer/src/GameObject.cpp",
+  "file": "/Users/erintolman/Desktop/Segfault_Platformer/src/GameObject.cpp"
+},
+{
+  "directory": "/Users/erintolman/Desktop/Segfault_Platformer/cmake-build-debug",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -isystem /usr/local/include  -g   -std=c++1z -o CMakeFiles/platformer.dir/src/gameobjectfactory.cpp.o -c /Users/erintolman/Desktop/Segfault_Platformer/src/gameobjectfactory.cpp",
+  "file": "/Users/erintolman/Desktop/Segfault_Platformer/src/gameobjectfactory.cpp"
+},
+{
+  "directory": "/Users/erintolman/Desktop/Segfault_Platformer/cmake-build-debug",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -isystem /usr/local/include  -g   -std=c++1z -o CMakeFiles/platformer.dir/src/jsonHelper.cpp.o -c /Users/erintolman/Desktop/Segfault_Platformer/src/jsonHelper.cpp",
+  "file": "/Users/erintolman/Desktop/Segfault_Platformer/src/jsonHelper.cpp"
+},
+{
+  "directory": "/Users/erintolman/Desktop/Segfault_Platformer/cmake-build-debug",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -isystem /usr/local/include  -g   -std=c++1z -o CMakeFiles/platformer.dir/src/levelloader.cpp.o -c /Users/erintolman/Desktop/Segfault_Platformer/src/levelloader.cpp",
+  "file": "/Users/erintolman/Desktop/Segfault_Platformer/src/levelloader.cpp"
+},
+{
+  "directory": "/Users/erintolman/Desktop/Segfault_Platformer/cmake-build-debug",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -isystem /usr/local/include  -g   -std=c++1z -o CMakeFiles/platformer.dir/src/physics.cpp.o -c /Users/erintolman/Desktop/Segfault_Platformer/src/physics.cpp",
+  "file": "/Users/erintolman/Desktop/Segfault_Platformer/src/physics.cpp"
+},
+{
+  "directory": "/Users/erintolman/Desktop/Segfault_Platformer/cmake-build-debug",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -isystem /usr/local/include  -g   -std=c++1z -o CMakeFiles/platformer.dir/src/Platform.cpp.o -c /Users/erintolman/Desktop/Segfault_Platformer/src/Platform.cpp",
+  "file": "/Users/erintolman/Desktop/Segfault_Platformer/src/Platform.cpp"
+},
+{
+  "directory": "/Users/erintolman/Desktop/Segfault_Platformer/cmake-build-debug",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -isystem /usr/local/include  -g   -std=c++1z -o CMakeFiles/platformer.dir/src/PlatformerGame.cpp.o -c /Users/erintolman/Desktop/Segfault_Platformer/src/PlatformerGame.cpp",
+  "file": "/Users/erintolman/Desktop/Segfault_Platformer/src/PlatformerGame.cpp"
+},
+{
+  "directory": "/Users/erintolman/Desktop/Segfault_Platformer/cmake-build-debug",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -isystem /usr/local/include  -g   -std=c++1z -o CMakeFiles/platformer.dir/src/Player.cpp.o -c /Users/erintolman/Desktop/Segfault_Platformer/src/Player.cpp",
+  "file": "/Users/erintolman/Desktop/Segfault_Platformer/src/Player.cpp"
+}
+]

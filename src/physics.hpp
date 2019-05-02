@@ -11,7 +11,7 @@ class Physics
 private:
 const double _pi, _frameRate;
 const bool _isStatic;
-sf::Vector2f _position, _velocity, _size;
+sf::Vector2f _position, _velocity, _size, _lastPos;
 
 public: 
 
@@ -28,6 +28,10 @@ void setPosition(sf::Vector2f pos);
 void setVelocity(sf::Vector2f vel);
 
 bool isGrounded();
+
+void iteratePhysics(double frameRate);
+
+void fixCollision(Physics other);
 
 };
 
