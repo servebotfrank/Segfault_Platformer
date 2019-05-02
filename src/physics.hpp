@@ -27,11 +27,12 @@ sf::Vector2f getSize() const;
 void setPosition(sf::Vector2f pos);
 void setVelocity(sf::Vector2f vel);
 
-bool isGrounded();
+bool isGrounded()const;
 
 void iteratePhysics(double frameRate);
 
-void fixCollision(Physics other);
+void fixCollisionX(const Physics & other);
+void fixCollisionY(const Physics & other);
 
 };
 
