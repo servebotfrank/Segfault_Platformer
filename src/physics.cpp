@@ -28,7 +28,7 @@ void Physics::setVelocity(sf::Vector2f vel)
 	_velocity = vel;
 }
 
-bool Physics::isGrounded()
+bool Physics::isGrounded()const
 {
 	return true;
 }
@@ -51,7 +51,32 @@ void Physics::iteratePhysics(double frameRate)
 
 }
 
-void Physics::fixCollision(Physics other)
+void Physics::fixCollisionX(const Physics & other)
 {
-	
+
+	if(_velocity.x>0)
+	{
+		_position.x=other._position.x - other._size.x/2;
+		_velocity.x = 0;
+	}
+	else 
+	{
+		_position.x=other._position.x + other._size.x/2;
+		_velocity.x = 0;
+	}
+
+}
+
+void Physics::fixCollisionY(const Physics & other)
+{
+	if(_velocity.y>0)
+	{
+		_position.y =other._position.y - other._size.y/2;
+		_velocity.y = 0;
+	}
+	else 
+	{
+		_position.y =other._position.y + other._size.y/2;
+		_velocity.y = 0;
+	}
 }
