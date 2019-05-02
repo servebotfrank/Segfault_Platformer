@@ -26,10 +26,21 @@ class Player : public GameObject{
         void update();
         void drawTo(sf::RenderWindow &window);
         void setPos(sf::Vector2f newPos);
-        
+
+        //MOVEMENT FUNCTIONS
+        void moveLeft();
+        void moveRight();
+        void Jump();
+
         
     private:
-    sf::RectangleShape player;
+    sf::RectangleShape _player;
+    sf::Vector2f _source;
+    sf::Sprite _sprite;
+    enum _direction{Left, Right};
+
+    float _speed;
+
 
 
 };

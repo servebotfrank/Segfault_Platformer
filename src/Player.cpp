@@ -20,3 +20,17 @@ void Player::update()
 {
 
 }
+
+//MOVEMENT FUNCTIONS
+void Player::moveLeft()
+{
+    _source.y = Left;
+    _sprite.move(-_speed, 0);
+}
+
+void Player::moveRight()
+{
+    _source.y = Right;
+    _sprite.move(_speed, 0);
+
+}
