@@ -41,19 +41,22 @@ bool Physics::collision(const Physics & other)
 	 _position.y + _size.y/2.0 < other.getPosition().y - other.getSize().y/2;
 }
 
-void Physics::iteratePhysics(double frameRate)
+void Physics::iteratePhysicsX(double frameRate)
 {
 	_lastPos = _position;
 
 	_position.x += _velocity.x/frameRate;
+}
 
+void Physics::iteratePhysicsY(double frameRate)
+{
+	_lastPos = _position;
 
-
+	_position.y+= _velocity.y/frameRate;
 }
 
 void Physics::fixCollisionX(const Physics & other)
 {
-
 	if(_velocity.x>0)
 	{
 		_position.x=other._position.x - other._size.x/2;
@@ -64,7 +67,6 @@ void Physics::fixCollisionX(const Physics & other)
 		_position.x=other._position.x + other._size.x/2;
 		_velocity.x = 0;
 	}
-
 }
 
 void Physics::fixCollisionY(const Physics & other)

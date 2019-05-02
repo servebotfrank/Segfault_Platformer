@@ -29,7 +29,8 @@ void setVelocity(sf::Vector2f vel);
 
 bool isGrounded()const;
 
-void iteratePhysics(double frameRate);
+void iteratePhysicsX(double frameRate);
+void iteratePhysicsY(double frameRate);
 
 void fixCollisionX(const Physics & other);
 void fixCollisionY(const Physics & other);
