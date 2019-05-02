@@ -21,6 +21,11 @@ void Player::update()
 
 }
 
+void Player::setPos(sf::Vector2f newPos)
+{
+    _player.setPosition(newPos);
+}
+
 //MOVEMENT FUNCTIONS
 void Player::moveLeft()
 {
