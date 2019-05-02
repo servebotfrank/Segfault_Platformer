@@ -24,8 +24,12 @@ class Player : public GameObject{
 
         //MEMBER FUNCTIONS
         void update();
+        void drawTo(sf::RenderWindow &window);
+        void setPos(sf::Vector2f newPos);
+        
         
     private:
+    sf::RectangleShape player;
 
 
 };
