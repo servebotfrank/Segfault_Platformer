@@ -25,7 +25,7 @@ private:
     sf::RenderWindow _window;
     LevelLoader _levelLoader;
     sf::Music _music;
-    std::vector<std::unique_ptr<GameObject>> _gameObjects;
+    std::vector<std::shared_ptr<GameObject>> _gameObjects;
 
     sf::Texture _backgroundTexture;
     sf::Sprite _backgroundSprite;

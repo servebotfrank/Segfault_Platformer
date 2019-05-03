@@ -15,8 +15,9 @@ PlatformerGame::PlatformerGame(const string& configFilePath)
     , _levelLoader(
         _configLoader.getPathToSchema(),
         _configLoader.getPathToTextures(),
-        _configLoader.getPathToLevels())
-    , _gameObjects(move(_levelLoader.loadLevel(_configLoader.getPathToLevel("test level"))))
+        _configLoader.getPathToLevels(),
+        _configLoader.getPathToLevel("test level"))
+    , _gameObjects(_levelLoader.getGameObjects())
     , _backgroundTexture(_levelLoader.getTexture("bg00.png"))
     , _backgroundSprite(_backgroundTexture)
 {
