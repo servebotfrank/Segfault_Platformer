@@ -4,6 +4,7 @@
     "properties": {
         "level name": { "type": "string" },
         "background texture": { "type": "string" },        
+        "game music": { "type": "string" },
         "textures": {
             "type": "array",
             "items": {
