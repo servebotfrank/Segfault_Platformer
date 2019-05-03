@@ -1,7 +1,7 @@
 cmake_minimum_required (VERSION 3.5 FATAL_ERROR)
 project (Platformer VERSION 0.1 LANGUAGES CXX)
 
-find_package(SFML 2.5 COMPONENTS system window graphics REQUIRED)
+find_package(SFML 2.5 COMPONENTS system window graphics audio REQUIRED)
 
 set (SOURCES
     src/configloader.cpp
@@ -36,7 +36,7 @@ set_target_properties(platformer PROPERTIES
 )
 
 target_link_libraries(platformer PRIVATE
-    sfml-graphics)
+    sfml-graphics sfml-audio)
 
 set (GNU_COMPILE_OPTIONS
     -ansi

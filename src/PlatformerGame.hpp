@@ -9,6 +9,8 @@
 
 #include <string>
 
+#include <SFML/Audio.hpp>
+
 class PlatformerGame {
 public:
     PlatformerGame(const std::string& configFilePath);
@@ -22,7 +24,8 @@ private:
     sf::View _view;
     sf::RenderWindow _window;
     LevelLoader _levelLoader;
-    std::vector<std::unique_ptr<GameObject>> _gameObjects;
+    sf::Music _music;
+    std::vector<std::shared_ptr<GameObject>> _gameObjects;
 
     sf::Texture _backgroundTexture;
     sf::Sprite _backgroundSprite;

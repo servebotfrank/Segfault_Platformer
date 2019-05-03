@@ -27,16 +27,23 @@ using std::make_unique;
 using sf::Vector2f;
 using sf::Texture;
 
-LevelLoader::LevelLoader(const std::string& pathToSchema, const std::string& pathToTextures, const std::string& pathToLevels)
-    : _pathToSchema(pathToSchema)
-    , _levelSchema(JSONHelper::createSchemaDocument(pathToSchema))
-    , _levelValidator(_levelSchema)
-    , _pathToTextures(pathToTextures)
-    , _loadedTextures()
-    , _pathToLevels(pathToLevels)
-{}
-
-vector<unique_ptr<GameObject>> LevelLoader::loadLevel(const string& pathToLevel)
+LevelLoader::LevelLoader(
+    const std::string& pathToSchema,
+    const std::string& pathToTextures,
+    const std::string& pathToLevels,
+    const std::string& levelName)
+        : _pathToSchema(pathToSchema)
+        , _levelSchema(JSONHelper::createSchemaDocument(pathToSchema))
+        , _levelValidator(_levelSchema)
+        , _pathToTextures(pathToTextures)
+        , _loadedTextures()
+        , _pathToLevels(pathToLevels)
+{
+    if (!levelName.empty()) {
+        loadLevel(levelName);
+    }
+}
+void LevelLoader::loadLevel(const string& pathToLevel)
 {
     auto level = JSONHelper::createDocument(_pathToLevels + pathToLevel);
     
@@ -48,6 +55,8 @@ vector<unique_ptr<GameObject>> LevelLoader::loadLevel(const string& pathToLevel)
 
     auto name = level["name"].GetString();
 
+    _musicPath = level["music path"].GetString();
+
     _backgroundTexture = loadTexture(level["background texture"].GetString());
 
     const auto& textureSources = level["textures"];
@@ -55,7 +64,6 @@ vector<unique_ptr<GameObject>> LevelLoader::loadLevel(const string& pathToLevel)
         loadTexture(textureSource["path"].GetString());
     }
 
-    vector<unique_ptr<GameObject>> gameObjects;
     const auto& gameObjectSources = level["game objects"];
     for (auto& gameObjectSource: gameObjectSources.GetArray()) {
         auto objectTypeString = gameObjectSource["type"].GetString();
@@ -75,7 +83,7 @@ vector<unique_ptr<GameObject>> LevelLoader::loadLevel(const string& pathToLevel)
         auto associatedTexture = gameObjectSource["texture"].GetString();
         auto texture = getTexture(associatedTexture);
         auto isStatic = gameObjectSource["is static"].GetBool();
-        gameObjects.push_back(
+        _gameObjects.push_back(
             GameObjectFactory(
                 objectTypeString,
                 objectName,
@@ -87,7 +95,15 @@ vector<unique_ptr<GameObject>> LevelLoader::loadLevel(const string& pathToLevel)
             )
         );
     }
-    return gameObjects;
+}
+std::shared_ptr<Player> LevelLoader::getPlayer() const {
+    return _player;
+}
+std::vector<std::shared_ptr<GameObject>> LevelLoader::getGameObjects() const {
+    return _gameObjects;
+}
+std::string LevelLoader::getMusicPath() const {
+    return _musicPath;
 }
 void LevelLoader::saveLevel(const string& pathToFile, vector<unique_ptr<GameObject>> levelObjects) const
 {

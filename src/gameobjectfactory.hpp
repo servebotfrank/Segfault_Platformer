@@ -3,10 +3,12 @@
 
 #include "GameObject.hpp"
 
+#include <memory>
+
 #include <SFML/Graphics.hpp>
 
 // Factory
-std::unique_ptr<GameObject> GameObjectFactory(
+std::shared_ptr<GameObject> GameObjectFactory(
     const std::string& type,
     const std::string& name,
     const sf::Texture& texture,
