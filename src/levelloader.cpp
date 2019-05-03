@@ -48,6 +48,8 @@ vector<unique_ptr<GameObject>> LevelLoader::loadLevel(const string& pathToLevel)
 
     auto name = level["name"].GetString();
 
+    _musicPath = level["music path"].GetString();
+
     _backgroundTexture = loadTexture(level["background texture"].GetString());
 
     const auto& textureSources = level["textures"];
@@ -88,6 +90,9 @@ vector<unique_ptr<GameObject>> LevelLoader::loadLevel(const string& pathToLevel)
         );
     }
     return gameObjects;
+}
+std::string LevelLoader::getMusicPath() const {
+    return _musicPath;
 }
 void LevelLoader::saveLevel(const string& pathToFile, vector<unique_ptr<GameObject>> levelObjects) const
 {

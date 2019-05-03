@@ -23,9 +23,11 @@ PlatformerGame::PlatformerGame(const string& configFilePath)
     _window.setView(_view);
     _window.clear(sf::Color(0, 255, 255));
     _backgroundSprite.setPosition(sf::Vector2f(-_configLoader.getWindowWidth()/2, -_configLoader.getWindowHeight()/2));
+    _music.openFromFile(_levelLoader.getMusicPath());
 }
 void PlatformerGame::run()
 {
+    _music.play();
     sf::Clock clock;
     while (_window.isOpen())
     {
